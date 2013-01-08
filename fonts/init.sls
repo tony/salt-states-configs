@@ -4,7 +4,10 @@
     - user: tony 
     - group: tony 
     - file_mode: 644
-    - dir_mode: 644
+    - dir_mode: 755
+    - recurse:
+      - user
+      - group
 
 pixel-fonts:
   pkg.installed:
