@@ -1,8 +1,9 @@
+include:
+  - vcs.git
+
 awesome:
     pkg:
       - installed
-    require:
-      - pkg: git
 
 awesome-config:
    git.latest:
@@ -10,3 +11,5 @@ awesome-config:
      - runas: tony
      - target: /home/tony/.config/awesome
      - submodules: true
+     - require:
+       - pkg: git
