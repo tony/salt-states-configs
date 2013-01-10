@@ -1,0 +1,13 @@
+style "panel"
+{
+    #bg[NORMAL]               = "#"
+    fg[NORMAL]               = "#FFFFFF"
+}
+widget "*PanelWidget*" style "panel"
+widget "*PanelApplet*" style "panel"
+class "*Panel*" style "panel"
+widget_class "*Mail*" style "panel"
+class "*notif*" style "panel"
+class "*Notif*" style "panel"
+class "*Tray*" style "panel"
+class "*tray*" style "panel"
