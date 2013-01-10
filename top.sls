@@ -1,5 +1,6 @@
 base:
     '*':
+       - vcs.*
        - vim
        - awesome
        - tmux
@@ -7,6 +8,9 @@ base:
        - gtk_theme
        - bash
        - fortune
+       - media.*
+       - playonlinux
+       - salt
 
 # cleansys 
 # sudo rm -rf ~/.bashrc ~/.bashprompt ~/.tmux.conf ~/.tmux ~/.fonts ~/.config/awesome ~/.vim ~/.vimrc \
