@@ -2,6 +2,7 @@ base:
     '*':
        #- user.*
        - vcs.*
+       - ruby
        - vim
        - awesome
        - tmux
