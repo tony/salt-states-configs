@@ -4,6 +4,10 @@ include:
 awesome:
     pkg:
       - installed
+    require:
+      - pkg.installed:
+        - names:
+          - feh
 
 awesome-config:
    git.latest:

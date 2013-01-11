@@ -1,5 +1,6 @@
 base:
     '*':
+       #- user.*
        - vcs.*
        - vim
        - awesome
@@ -11,6 +12,7 @@ base:
        - media.*
        - playonlinux
        - salt
+       - nodejs
 
 # cleansys 
 # sudo rm -rf ~/.bashrc ~/.bashprompt ~/.tmux.conf ~/.tmux ~/.fonts ~/.config/awesome ~/.vim ~/.vimrc \
