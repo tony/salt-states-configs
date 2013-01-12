@@ -32,7 +32,7 @@ windows-fonts:
 
 flush-font-cache:
   cmd.run:
-    - name: fc-cache -fv
+    - name: fc-cache -f
     - user: tony
     - group: tony
     - cwd: /home/tony

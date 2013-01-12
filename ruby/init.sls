@@ -14,7 +14,9 @@ rvm:
      - user: tony
      - group: tony
      - cwd: /home/tony
-     - unless: rvm -v 2>/dev/null
+     #- env: HOME=/home/tony PATH=$PATH:$HOME/.rvm/bin
+     #- env: PATH=$PATH:$HOME/.rvm/bin
+     - unless: /home/tony/.rvm/bin/rvm -v >/dev/null
    require:
      - pkg: rvm-deps
 
