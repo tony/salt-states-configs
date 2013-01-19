@@ -12,8 +12,9 @@ base:
        - fortune
        - media.*
        - playonlinux
+       - nodejs
+       - nodejs.phantomjs
        - salt
-       - nodejs.*
 
 # cleansys 
 # sudo rm -rf ~/.bashrc ~/.bashprompt ~/.tmux.conf ~/.tmux ~/.fonts ~/.config/awesome ~/.vim ~/.vimrc \
