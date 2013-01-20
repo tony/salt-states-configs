@@ -4,6 +4,7 @@ include:
 rxvt-unicode:
   pkg:
     - installed
+    - name: rxvt-unicode-256color
 
 /home/tony/.Xdefaults:
   file.managed:
