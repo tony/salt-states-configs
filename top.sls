@@ -14,6 +14,7 @@ base:
        - playonlinux
        - nodejs
        - nodejs.phantomjs
+       - markup.*
        - salt
 
 # cleansys 
