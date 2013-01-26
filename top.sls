@@ -16,6 +16,7 @@ base:
        - nodejs.phantomjs
        - markup.*
        - salt
+       - projects.*
     'wuwei':
        - salt.master
 
