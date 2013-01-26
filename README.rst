@@ -10,3 +10,7 @@
 # todo:
 
 * use ports directory structure to manage apps
+
+# borrows from
+
+* https://github.com/bclermont/states
