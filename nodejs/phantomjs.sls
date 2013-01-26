@@ -2,17 +2,18 @@
 # Saltstate file for phantomjs 1.8 binary
 
 download-phantomjs:
-  file.managed:
+  #file.managed:
     #- name: /tmp/phantomjs-1.8.1-linux-i686.tar.bz2
     #- source: http://phantomjs.googlecode.com/files/phantomjs-1.8.1-linux-i686.tar.bz2
     #- source_hash: md5=6e834974c9c6fc8af3703ea794aa397
-    - name: /tmp/phantomjs-1.8.1-linux-x86_64.tar.bz2
-    - source: http://phantomjs.googlecode.com/files/phantomjs-1.8.1-linux-x86_64.tar.bz2
-    - source_hash: md5=cb58475032a8853a4f222b5adbdfa43c
+    #- name: /tmp/phantomjs-1.8.1-linux-x86_64.tar.bz2
+    #- source: http://phantomjs.googlecode.com/files/phantomjs-1.8.1-linux-x86_64.tar.bz2
+    #- source_hash: md5=cb58475032a8853a4f222b5adbdfa43c
   cmd:
     - run
     - cwd: /tmp
     - name: wget http://phantomjs.googlecode.com/files/phantomjs-1.8.1-linux-x86_64.tar.bz2
+    - unless: test -e /tmp/phantomjs-1.8.1-linux-x86_64.tar.bz2
 
 # Extract it
 extract-phantomjs:
@@ -22,6 +23,7 @@ extract-phantomjs:
       #- tar xvf /tmp/phantomjs-1.8.1-linux-i686.tar.bz2
       - tar xvf phantomjs-1.8.1-linux-x86_64.tar.bz2
     - run
+    - unless: test -e /tmp/phantomjs-1.8.1-linux-x86_64.tar.bz2
     - require:
       #- file.managed: download-phantomjs
       - cmd: download-phantomjs

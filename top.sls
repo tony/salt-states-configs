@@ -16,6 +16,8 @@ base:
        - nodejs.phantomjs
        - markup.*
        - salt
+    'wuwei':
+       - salt.master
 
 # cleansys 
 # sudo rm -rf ~/.bashrc ~/.bashprompt ~/.tmux.conf ~/.tmux ~/.fonts ~/.config/awesome ~/.vim ~/.vimrc \
