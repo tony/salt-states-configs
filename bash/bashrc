@@ -130,3 +130,7 @@ fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export TERM=screen-256color
+
+if [ -f $HOME/.dircolors-solarized ]; then
+    eval `dircolors $HOME/.dircolors-solarized/dircolors.256dark`
+fi
