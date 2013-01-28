@@ -11,6 +11,7 @@ python2:
   pkg.installed:
     - names:
       - python2.7
+      - python-dev
 
 
 virtualenvwrapper:
