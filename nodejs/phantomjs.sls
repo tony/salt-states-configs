@@ -17,13 +17,12 @@ download-phantomjs:
 
 # Extract it
 extract-phantomjs:
-  cmd:
+  cmd.run:
+    #todo cpuarch:
     - cwd: /tmp
-    - names:
-      #- tar xvf /tmp/phantomjs-1.8.1-linux-i686.tar.bz2
-      - tar xvf phantomjs-1.8.1-linux-x86_64.tar.bz2
-    - run
-    - unless: test -e /tmp/phantomjs-1.8.1-linux-x86_64.tar.bz2
+    - name: tar xvf phantomjs-1.8.1-linux-x86_64.tar.bz2
+    #- name: tar xvf /tmp/phantomjs-1.8.1-linux-i686.tar.bz2
+    - onlyif: test -e /tmp/phantomjs-1.8.1-linux-x86_64.tar.bz2
     - require:
       #- file.managed: download-phantomjs
       - cmd: download-phantomjs
@@ -32,12 +31,17 @@ extract-phantomjs:
 # Copy binary
 
 phantomjs:
-  file.managed:
-    - name: /usr/local/bin/phantomjs
-    - source: salt://nodejs/bin/phantomjs
-    - user: root
-    - group: root
-    - mode: 755
+  #file.managed:
+    #- name: /usr/local/bin/phantomjs
+    #- source: salt://nodejs/bin/phantomjs
+    #- user: root
+    #- group: root
+    #- mode: 755
     #- source: file:///tmp/phantomjs-1.8.1-linux-x86_64/bin/phantomjs
     #- require:
     #  - cmd: extract-phantomjs
+  cmd.run:
+    - name: mv /tmp/phantomjs-1.8.1-linux-x86_64/bin/phantomjs /usr/local/bin/phantomjs
+    - unless: test -e /usr/local/bin/phantomjs
+    - require:
+      - cmd: extract-phantomjs 

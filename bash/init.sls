@@ -21,6 +21,11 @@ dircolors-solarized:
      - require:
        - pkg: git
 
+dircolors-solarized-perms:
+  cmd.run:
+    - name: chmod -R 755 /home/tony/.dircolors-solarized
+    - runas: tony
+
 /home/tony/.dircolors-solarized:
   file.directory:
     - user: tony 
