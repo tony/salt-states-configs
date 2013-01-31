@@ -2,8 +2,8 @@
 #urxvt.font: xft:Terminus-10,xft:WenQuanYi Micro Hei Mono:antialias=true
 #urxvt.font: xft:DejaVu Sans Mono,xft:WenQuanYi Micro Hei Mono:style=Regular:pixelsize=11:antialias=true
 #URxvt.font:xft:WenQuanYi Bitmap Song:pixelsize=10,xft:Terminus-10,xft:WenQuanYi Micro Hei:pixelsize=12:antialias=True,xft:WenQuanYi Zen Hei:pixelsize=12:antialias=False,xft:Code2000:pixelsize=12:antialias=False
-URxvt.font:xft:Terminus-10,xft:DejaVu Sans Mono,xft:WenQuanYi Micro Hei:pixelsize=12:antialias=True,xft:WenQuanYi Zen Hei:pixelsize=12:antialias=False,xft:Code2000:pixelsize=12:antialias=False
-URxvt.boldFont:xft:Terminus-10,xft:DejaVu Sans Mono,xft:WenQuanYi Micro Hei:pixelsize=12:antialias=True,xft:WenQuanYi Zen Hei:pixelsize=12:antialias=False,xft:Code2000:pixelsize=12:antialias=False
+URxvt.font:xft:Monaco-9:antialias=False,xft:Terminus-10,xft:DejaVu Sans Mono,xft:WenQuanYi Micro Hei:pixelsize=12:antialias=True,xft:WenQuanYi Zen Hei:pixelsize=12:antialias=False,xft:Code2000:pixelsize=12:antialias=False
+URxvt.boldFont:xft:Monaco-9:antialias=False,xft:Terminus-10,xft:DejaVu Sans Mono,xft:WenQuanYi Micro Hei:pixelsize=12:antialias=True,xft:WenQuanYi Zen Hei:pixelsize=12:antialias=False,xft:Code2000:pixelsize=12:antialias=False
 #URxvt.boldFont:xft:Terminus-10,xft:WenQuanYi Micro Hei:pixelsize=10:antialias=False,xft:WenQuanYi Zen Hei:pixelsize=10:antialias=False,xft:Code2000:pixelsize=10:antialias=False
 
 URxvt.inputMethod: ibus

@@ -14,6 +14,7 @@ base:
        - playonlinux
        - nodejs
        - nodejs.phantomjs
+       - spotify
        - markup.*
        - salt
        - projects.*
