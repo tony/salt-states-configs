@@ -9,7 +9,7 @@ vim-config:
    git.latest:
      - name: git://github.com/tony/vim-config.git
      - runas: tony
-     - target: /home/tony/.vim
+     - target: /home/{{ pillar['username'] }}/.vim
      - submodules: true
      #- require_in:
      #  - git: vim-vundle
@@ -19,7 +19,7 @@ vim-config:
 #   git.latest:
 #     - name: git://github.com/gmarik/vundle.git
 #     - runas: tony
-#     - target: /home/tony/.vim/bundle/vundle
+#     - target: /home/{{ pillar['username'] }}/.vim/bundle/vundle
 #     - submodules: true
      #- require_in:
      #  - cmd: Run vundle
@@ -41,7 +41,7 @@ vim:
 
 /home/tony/.vimrc:
   file.symlink:
-    - target: /home/tony/.vim/.vimrc
+    - target: /home/{{ pillar['username'] }}/.vim/.vimrc
   #require:
   #  - cmd: Run vundle
 

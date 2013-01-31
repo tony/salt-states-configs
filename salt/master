@@ -301,10 +301,10 @@ file_roots:
 # file and sls files. The difference is that the data does not need to be
 # in the highstate format, and is generally just key/value pairs.
 #
-#pillar_roots:
+pillar_roots:
   base:
-    - /srv/base/pillar
-    - /srv/private/pillar
+    - /srv/salt/base/pillar
+    - /srv/salt/private/pillar
 #
 # ext_pillar:
 #   - hiera: /etc/hiera.yaml
