@@ -1,8 +1,8 @@
 tony:
   user.present:
-    - fullname: Tony N 
+    - fullname: {{ pillar['fullname'] }}
     - shell: /bin/bash
-    - home: /home/tony
+    - home: /home/{{ pillar['username'] }}
     - gid_from_name: true
     - groups:
       - wheel
