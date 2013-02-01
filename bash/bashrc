@@ -113,7 +113,7 @@ if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
     . /usr/local/bin/virtualenvwrapper.sh
 fi
 
-if [ -f /home/tony/.rvm/scripts/rvm ]; then
+if [ -f $HOME/.rvm/scripts/rvm ]; then
     . $HOME/.rvm/scripts/rvm
 fi
 

@@ -1,8 +1,8 @@
-/home/tony/.fonts:
+/home/{{ pillar['username'] }}/.fonts:
   file.recurse:
     - source: salt://fonts/fonts
-    - user: tony 
-    - group: tony 
+    - user: {{ pillar['username'] }}
+    - group: {{ pillar['username'] }}
     - file_mode: 644
     - dir_mode: 755
     - recurse:
@@ -33,6 +33,6 @@ windows-fonts:
 flush-font-cache:
   cmd.run:
     - name: fc-cache -f
-    - user: tony
-    - group: tony
-    - cwd: /home/tony
+    - user: {{ pillar['username'] }}
+    - group: {{ pillar['username'] }}
+    - cwd: /home/{{ pillar['username'] }}

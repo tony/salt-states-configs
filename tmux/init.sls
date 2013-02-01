@@ -4,8 +4,8 @@ include:
 tmux-config:
    git.latest:
      - name: git://github.com/tony/tmux-config.git
-     - runas: tony
-     - target: /home/tony/.tmux
+     - runas: {{ pillar['username'] }}
+     - target: /home/{{ pillar['username'] }}/.tmux
      - submodules: true
      - require:
        - pkg: git
@@ -14,6 +14,6 @@ tmux:
     pkg:
       - installed
 
-/home/tony/.tmux.conf:
+/home/{{ pillar['username'] }}/.tmux.conf:
   file.symlink:
-    - target: /home/tony/.tmux/.tmux.conf
+    - target: /home/{{ pillar['username'] }}/.tmux/.tmux.conf

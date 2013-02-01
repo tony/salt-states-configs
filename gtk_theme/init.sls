@@ -1,15 +1,15 @@
-/home/tony/.gtkrc-2.0:
+/home/{{ pillar['username'] }}/.gtkrc-2.0:
   file.managed:
     - source: salt://gtk_theme/gtkrc-2.0
-    - user: tony 
-    - group: tony 
+    - user: {{ pillar['username'] }}
+    - group: {{ pillar['username'] }}
     - mode: 644
 
-/home/tony/.gtkrc-2.0.mine:
+/home/{{ pillar['username'] }}/.gtkrc-2.0.mine:
   file.managed:
     - source: salt://gtk_theme/gtkrc-2.0.mine
-    - user: tony 
-    - group: tony 
+    - user: {{ pillar['username'] }}
+    - group: {{ pillar['username'] }}
     - mode: 644
 
 lxappearance:

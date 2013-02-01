@@ -11,12 +11,12 @@ rvm-deps:
 rvm:
    cmd.run:
      - name: \curl -L https://get.rvm.io | bash -s stable --ruby
-     - user: tony
-     - group: tony
-     - cwd: /home/tony
-     #- env: HOME=/home/tony PATH=$PATH:$HOME/.rvm/bin
+     - user: {{ pillar['username'] }}
+     - group: {{ pillar['username'] }}
+     - cwd: /home/{{ pillar['username'] }}
+     #- env: HOME=/home/{{ pillar['username'] }} PATH=$PATH:$HOME/.rvm/bin
      #- env: PATH=$PATH:$HOME/.rvm/bin
-     - unless: /home/tony/.rvm/bin/rvm -v >/dev/null
+     - unless: /home/{{ pillar['username'] }}/.rvm/bin/rvm -v >/dev/null
    require:
      - pkg: rvm-deps
 
