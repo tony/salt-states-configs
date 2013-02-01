@@ -11,8 +11,8 @@ vim-deps:
 vim-config:
    git.latest:
      - name: git://github.com/tony/vim-config.git
-     - runas: tony
-     - target: /home/tony/.vim
+     - runas: {{ pillar['username'] }}
+     - target: /home/{{ pillar['username'] }}/.vim
      - submodules: true
      - require:
        - pkg: git
@@ -23,6 +23,6 @@ vim:
     pkg:
       - installed
 
-/home/tony/.vimrc:
+/home/{{ pillar['username'] }}/.vimrc:
   file.symlink:
-    - target: /home/tony/.vim/.vimrc
+    - target: /home/{{ pillar['username'] }}/.vim/.vimrc
