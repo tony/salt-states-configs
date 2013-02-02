@@ -1,6 +1,8 @@
 base:
     '*':
        #- user.*
+       - bash
+       - ibus
        - deploy.*
        - vcs.*
        - ruby
@@ -9,7 +11,6 @@ base:
        - tmux
        - rxvt-unicode
        - gtk_theme
-       - bash
        - fortune
        - media.*
        - playonlinux
