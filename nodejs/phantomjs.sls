@@ -9,8 +9,7 @@ download-phantomjs:
     #- name: /tmp/phantomjs-1.8.1-linux-x86_64.tar.bz2
     #- source: http://phantomjs.googlecode.com/files/phantomjs-1.8.1-linux-x86_64.tar.bz2
     #- source_hash: md5=cb58475032a8853a4f222b5adbdfa43c
-  cmd:
-    - run
+  cmd.run:
     - cwd: /tmp
     - name: wget http://phantomjs.googlecode.com/files/phantomjs-1.8.1-linux-x86_64.tar.bz2
     - unless: test -e /tmp/phantomjs-1.8.1-linux-x86_64.tar.bz2
