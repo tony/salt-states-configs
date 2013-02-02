@@ -1,6 +1,7 @@
 base:
     '*':
        #- user.*
+       - deploy.*
        - vcs.*
        - ruby
        - vim

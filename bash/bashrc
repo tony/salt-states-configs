@@ -152,6 +152,4 @@ if which tmux 2>&1 >/dev/null; then
 
 fi
 
-
-
-
+alias killsalt='sudo service salt-minion stop && sudo service salt-master stop && sudo pkill -9 salt-minion && sudo pkill -9 salt-master'
