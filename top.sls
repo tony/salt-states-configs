@@ -2,26 +2,28 @@ base:
     '*':
        #- user.*
        - bash
-       - ibus
        - deploy.*
        - vcs.*
        - ruby
        - vim
-       - awesome
        - tmux
-       - rxvt-unicode
-       - gtk_theme
        - fortune
-       - media.*
-       - playonlinux
-       - nodejs
-       - nodejs.phantomjs
-       - spotify
        - markup.*
        - salt
        - projects.*
     'wuwei':
        - salt.master
+       - study.*
+       - gtk_theme
+       - awesome
+       - playonlinux
+       - nodejs
+       - nodejs.phantomjs
+       - spotify
+       - media.*
+       - ibus
+       - rxvt-unicode
+
 
 # cleansys 
 # sudo rm -rf ~/.bashrc ~/.bashprompt ~/.tmux.conf ~/.tmux ~/.fonts ~/.config/awesome ~/.vim ~/.vimrc \
