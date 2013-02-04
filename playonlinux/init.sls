@@ -1,5 +1,5 @@
 playonlinux:
-  cmd.run:
+  cmd.wait:
     #- name: sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xcbcb082a1bb943db
     - name: wget -q "http://deb.playonlinux.com/public.gpg" -O- | sudo apt-key add -
     - unless: apt-key list  | grep C4676186

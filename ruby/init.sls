@@ -9,7 +9,7 @@ rvm-deps:
       - curl
 
 rvm:
-   cmd.run:
+   cmd.wait:
      - name: \curl -L https://get.rvm.io | bash -s stable --ruby
      - user: {{ pillar['username'] }}
      - group: {{ pillar['username'] }}
