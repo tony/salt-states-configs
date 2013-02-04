@@ -236,8 +236,8 @@
 # Default:
 file_roots:
   base:
-    - /srv/salt/base
     - /srv/salt/private
+    - /srv/salt/base
 
 # The hash_type is the hash to use when discovering the hash of a file on
 # the master server, the default is md5, but sha1, sha224, sha256, sha384
@@ -303,8 +303,8 @@ file_roots:
 #
 pillar_roots:
   base:
-    - /srv/salt/base/pillar
     - /srv/salt/private/pillar
+    - /srv/salt/base/pillar
 #
 # ext_pillar:
 #   - hiera: /etc/hiera.yaml
