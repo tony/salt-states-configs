@@ -11,6 +11,7 @@ base:
        - markup.*
        - salt
        - projects.*
+       - tools
     'wuwei':
        - salt.master
        - study.*
