@@ -52,4 +52,5 @@ To do
 Borrows from
 ------------
 
-* https://github.com/bclermont/states
+- https://github.com/bclermont/states
+- https://github.com/rentalita/ubuntu-setup - medibuntu, some nginx
