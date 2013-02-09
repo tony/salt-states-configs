@@ -1,0 +1,28 @@
+[remote]
+lirc_device = /dev/lircd
+lirc_remote_identifier = mceusb
+lirc_release_suffix = _UP
+lirc_repeat_threshold = 10
+button_name_up = Up
+button_name_down = Down
+button_name_left = Left
+button_name_right = Right
+button_name_select = OK
+button_name_menu = Home
+
+[flash]
+{%- if grains['cpuarch'] == 'i686' %}
+flash_location = /home/{{ pillar['username'] }}/.hulu/libflashplayer-11_1r102_63_32bit.so
+{%- elif grains['cpuarch'] == 'x86_64' %}
+flash_location = /home/{{ pillar['username'] }}/.hulu/libflashplayer-11_1r102_63_64bit.so
+{%- endif %}
+
+[screensaver]
+suspend_script = (null)
+resume_script = (null)
+
+[version]
+latest = (null)
+eula_version = 1
+
+# vim: set filetype=sls.yaml:
