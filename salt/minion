@@ -230,6 +230,12 @@
 #  base:
 #    - /srv/salt
 
+file_roots:
+  base:
+    - /srv/salt/private
+    - /srv/salt/base
+
+
 # The hash_type is the hash to use when discovering the hash of a file in
 # the minion directory, the default is md5, but sha1, sha224, sha256, sha384
 # and sha512 are also supported.
@@ -241,6 +247,12 @@
 #pillar_roots:
 #  base:
 #    - /srv/pillar
+
+pillar_roots:
+  base:
+    - /srv/salt/private/pillar
+    - /srv/salt/base/pillar
+
 
 ######        Security settings       #####
 ###########################################

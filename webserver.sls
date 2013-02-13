@@ -7,6 +7,16 @@
     - require:
       - group: www-data
 
+/srv/www:
+  file.directory:
+    - user: www-data
+    - group: www-data
+    - mode: 775
+    - makedirs: True
+    - require:
+      - group: www-data
+
+
 
 www-data:
   group.present:
