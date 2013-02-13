@@ -54,3 +54,5 @@ Borrows from
 
 - https://github.com/bclermont/states
 - https://github.com/rentalita/ubuntu-setup - medibuntu, some nginx
+- https://github.com/jollyroger/salt-states/blob/master/vim/init.sls -
+  vim: vim_bin variable, update alternatives.
