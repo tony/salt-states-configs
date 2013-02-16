@@ -9,7 +9,7 @@ base:
        - tmux
        - fortune
        - markup.*
-       - salt
+       - salt.minion
        #- projects.*
        - tools
        - php

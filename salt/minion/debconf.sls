@@ -1,0 +1,3 @@
+debconf-utils:
+  pkg:
+    - installed
