@@ -1,11 +1,11 @@
 python-software-properties:
   pkg.installed
 
-python-virtualenv:
-  pkg.installed:
-    - name: python-virtualenv
-  require:
-    - pkg: python2.7
+#python-virtualenv:
+  #  pkg.installed:
+    #    - name: python-virtualenv
+    #  require:
+      #    - pkg: python2.7
 
 python2:
   pkg.installed:
@@ -14,9 +14,14 @@ python2:
       - python-dev
 
 
-virtualenvwrapper:
-  pip.installed:
-    - version: 3.6
+virtualenv:
+  pip:
+    - installed
   require:
-    - pkg.installed:
-      - name: python2
+    - pkg.installed: python2
+
+virtualenvwrapper:
+  pip:
+    - installed
+    - require:
+      - pip.installed: virtualenv
