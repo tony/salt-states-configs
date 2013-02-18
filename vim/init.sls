@@ -8,15 +8,6 @@ vim-deps:
      - require_in:
        - pkg: vim
 
-vim-config:
-   git.latest:
-     - name: git://github.com/tony/vim-config.git
-     - runas: {{ pillar['username'] }}
-     - target: /home/{{ pillar['username'] }}/.vim
-     - submodules: true
-     - require:
-       - pkg: git
-
 {% set vim_pkg = pillar["vim"]|d("vim-nox") %}
 {% set vim_bin = "/usr/bin/" + vim_pkg|replace("-", ".") %}
 vim:
@@ -24,10 +15,6 @@ vim:
       - pkg: vim-deps
   pkg.installed:
     - name: {{ vim_pkg }}
-
-/home/{{ pillar['username'] }}/.vimrc:
-  file.symlink:
-    - target: /home/{{ pillar['username'] }}/.vim/.vimrc
 
 vim_alternatives:
   cmd.wait:
