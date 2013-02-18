@@ -7,15 +7,15 @@ python-m2crypto:
   require:
     - pkg: python2
 
-#salt-dev-packages:
-  #  pip.installed:
-    #    - names:
-      #      - pyzmq
-      #      - PyYAML
-      #      - pycrypto
-      #      - msgpack-python
-      #      - jinja2
-      #      - psutil
+salt-dev-packages:
+  pip.installed:
+    - names:
+        - pyzmq
+        - PyYAML
+        - pycrypto
+        - msgpack-python
+        - jinja2
+        - psutil
 
 
 # do pip install -e ./salt
@@ -23,17 +23,17 @@ python-m2crypto:
 
 /home/{{ pillar['username'] }}/.virtualenvs/salt:
   virtualenv.managed:
-    #- no_site_packages: True
+    - no_site_packages: True
     - system_site_packages: True
     - runas: {{ pillar['username'] }}
     - requirements: salt://salt/dev/requirements.txt
     - template: jinja
-  #pip.installed:
-  # temporarily, https://github.com/saltstack/salt/issues/3751
-  #     - name: /home/{{ pillar['username'] }}/study/python/salt
-  #      - editable: file:///home/{{ pillar['username'] }}/study/python/salt
-  #- user: {{ pillar['username'] }}
-      #- editable: True # equivalent to python -e
-#      - bin_env: /home/{{ pillar['username'] }}/.virtualenvs/salt/bin/pip
-#      - require:
-  #          - virtualenv.managed: /home/{{ pillar['username'] }}/.virtualenvs/salt
+  pip.installed:
+    - name: /home/{{ pillar['username'] }}/study/python/salt
+    - editable: file:///home/{{ pillar['username'] }}/study/python/salt
+    # temporarily, https://github.com/saltstack/salt/issues/3751
+    #- editable: True # equivalent to python -e
+    - user: {{ pillar['username'] }}
+    - bin_env: /home/{{ pillar['username'] }}/.virtualenvs/salt/bin/pip
+    - require:
+      - virtualenv.managed: /home/{{ pillar['username'] }}/.virtualenvs/salt
