@@ -4,5 +4,5 @@
 
 include:
   - salt.minion.mysql
-  - mysql.server
-  - mysql.config
+  - databases.mysql.server
+  - databases.mysql.config

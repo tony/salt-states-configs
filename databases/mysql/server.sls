@@ -1,5 +1,5 @@
 include:
-  - mysql.client
+  - databases.mysql.client
 
 /etc/mysql/debian.cnf:
   file.managed:

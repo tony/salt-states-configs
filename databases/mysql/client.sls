@@ -1,5 +1,5 @@
 include :
-  - mysql.common
+  - databases.mysql.common
 
 mysql-client:
   pkg.installed:
