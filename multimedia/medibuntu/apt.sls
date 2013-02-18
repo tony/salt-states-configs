@@ -7,7 +7,7 @@ medibuntu-apt:
 /etc/apt/sources.list.d/medibuntu.list:
   file:
     - managed
-    - source: salt://medibuntu/etc/apt/sources.list.d/medibuntu.list
+    - source: salt://multimedia/medibuntu/etc/apt/sources.list.d/medibuntu.list
     - user: root
     - group: root
     - mode: 644

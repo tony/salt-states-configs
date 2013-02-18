@@ -1,6 +1,3 @@
-# todo, make it so tony-salt-configs (in a separate repository)
-# extends bash/vim/etc anything with a configuration
-
 /home/{{ pillar['username'] }}/.bashrc:
   file.managed:
     - source: salt://tony/home/.bashrc

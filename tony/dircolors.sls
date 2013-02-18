@@ -1,5 +1,5 @@
 include:
-  - bash
+  - devel.git 
 
 dircolors-solarized:
    git.latest:

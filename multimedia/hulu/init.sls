@@ -10,10 +10,10 @@ huludesktop:
 huludesktop-flash:
   file.managed:
     {%- if grains['cpuarch'] == "i686" %}
-    - source: salt://hulu/files/libflashplayer-11_1r102_63_32bit.so
+    - source: salt://multimedia/hulu/files/libflashplayer-11_1r102_63_32bit.so
     - name: /home/{{ pillar['username'] }}/.hulu/libflashplayer-11_1r102_63_32bit.so
     {%- elif grains['cpuarch'] == "x86_64" %}
-    - source: salt://hulu/files/libflashplayer-11_1r102_63_64bit.so
+    - source: salt://multimedia/hulu/files/libflashplayer-11_1r102_63_64bit.so
     - name: /home/{{ pillar['username'] }}/.hulu/libflashplayer-11_1r102_63_64bit.so
     {%- endif %}
     - mode: 755
@@ -26,7 +26,7 @@ huludesktop-flash:
 
 huludesktop-flash-config:
   file.managed:
-    - source: salt://hulu/files/huludesktop
+    - source: salt://multimedia/hulu/files/huludesktop
     - name: /home/{{ pillar['username'] }}/.huludesktop
     - mode: 755
     - user: {{ pillar['username'] }}

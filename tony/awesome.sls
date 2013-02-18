@@ -1,5 +1,6 @@
 include:
-  - awesome
+  - wm.awesome
+  - devel.git
 
 awesome-config:
    git.latest:
