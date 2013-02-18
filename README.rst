@@ -1,6 +1,8 @@
 saltstack config files
 ======================
 
+Configure a ubuntu 12.10 development environment with salt.
+
 For demonstration. Setting up a laptop / server / work env in pure
 saltstack states.
 
@@ -12,6 +14,9 @@ Features
 * rxvt-unicode - custom ``Xdefaults`` w/ support for chinese characater
   and ibus for pinyin.
 * pixel fonts, unicode fonts
+* my personal configuratinos are found in `tony` state, if you follow
+  you may refer to this when creating states to copy your own configs
+  over.
 
 Setup
 -----
@@ -45,19 +50,12 @@ Copy ``pillar/settings.sls.example`` to ``pillar/settings.sls`` and edit
 To do
 -----
 
-- use ports hierarchy to organize apps
-- separate configs from apps
-- separate daemons from apps
-- separate daemons, from text, from curses, from x11 apps
+- use ports hierarchy to organize apps [in-progress]
+- separate configs from apps [done]
+- separate daemons, from text, from curses, from x11 apps [in-progress]
 - wire in study.python.salt for salt.dev pillar
-
-Borrows from
-------------
-
-- https://github.com/bclermont/states
-- https://github.com/rentalita/ubuntu-setup - medibuntu, some nginx
-- https://github.com/jollyroger/salt-states/blob/master/vim/init.sls -
-  vim: vim_bin variable, update alternatives. mysql state.
+- use pillars to allow users to download their awesome, vim, etc configs
+  from vcs's like git
 
 Salt core TODO ideas
 --------------------
@@ -66,3 +64,13 @@ Salt core TODO ideas
 - jinja template support for requirements.txt on pip/virtualenv
 - enhanced pip.installed editable support
   https://github.com/saltstack/salt/issues/3751
+
+Borrows from
+------------
+
+- https://github.com/bclermont/states
+- https://github.com/rentalita/ubuntu-setup - medibuntu, some nginx
+- https://github.com/jollyroger/salt-states/blob/master/vim/init.sls -
+  vim: vim_bin variable, update alternatives. mysql state.
+- ports structure:
+  http://ftp.netbsd.org/pub/pkgsrc/current/pkgsrc/README.html
