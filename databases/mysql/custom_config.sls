@@ -1,5 +1,5 @@
 include:
-  - mysql.config
+  - databases.mysql.config
 
 extend:
   /etc/mysql/my.cnf:
