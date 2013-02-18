@@ -45,10 +45,11 @@ Copy ``pillar/settings.sls.example`` to ``pillar/settings.sls`` and edit
 To do
 -----
 
-- use ports directory structure to manage apps
+- use ports hierarchy to organize apps
 - separate configs from apps
 - separate daemons from apps
 - separate daemons, from text, from curses, from x11 apps
+- wire in study.python.salt for salt.dev pillar
 
 Borrows from
 ------------
