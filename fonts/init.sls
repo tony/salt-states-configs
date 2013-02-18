@@ -9,11 +9,6 @@
       - user
       - group
 
-pixel-fonts:
-  pkg.installed:
-    - names:
-      - xfonts-terminus
-
 # takin care of biz in a fixed width font
 fixed-width-fonts:
    pkg.installed:
