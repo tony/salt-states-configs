@@ -28,7 +28,7 @@ include:
     - user: root
     - group: root
     - mode: 0644
-    - source: salt://mysql/server-encoding-and-collation.cnf
+    - source: salt://databases/mysql/server-encoding-and-collation.cnf
     - require:
       - pkg: mysql-server
     - watch_in:
@@ -41,7 +41,7 @@ include:
     - user: root
     - group: root
     - mode: 0644
-    - source: salt://mysql/default-table-engine.cnf
+    - source: salt://databases/mysql/default-table-engine.cnf
     - require:
       - pkg: mysql-server
     - watch_in:

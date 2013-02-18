@@ -1,5 +1,5 @@
 include:
-  - mysql.common
+  - databses.mysql.common
   - apt.percona
 
 extend:

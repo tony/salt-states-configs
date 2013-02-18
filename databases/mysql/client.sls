@@ -10,7 +10,7 @@ mysql-client:
     - user: root
     - group: root
     - mode: 0644
-    - source: salt://mysql/client-encoding-and-collation.cnf
+    - source: salt://databases/mysql/client-encoding-and-collation.cnf
     - require:
       - pkg: mysql-client
     - require_in:
