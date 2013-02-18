@@ -7,7 +7,7 @@ extend:
       - user: root
       - group: root
       - mode: 0644
-      - source: salt://mysql/my.cnf
+      - source: salt://databases/mysql/my.cnf
       - require_in:
         file: /etc/mysql
       - watch_in:

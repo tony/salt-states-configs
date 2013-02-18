@@ -1,6 +1,6 @@
 include:
-  - mysql.percona.client
-  - mysql.server
+  - databases.mysql.percona.client
+  - databases.mysql.server
 
 extend:
   mysql-server:

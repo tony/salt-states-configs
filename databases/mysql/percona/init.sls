@@ -1,2 +1,2 @@
 include:
-  - mysql.percona.server
+  - databases.mysql.percona.server
