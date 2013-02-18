@@ -7,7 +7,7 @@ spotify_apt_sources:
 
 /etc/apt/sources.list.d/spotify.list:
   file.managed:
-    - source: salt://spotify/spotify.list
+    - source: salt://multimedia/spotify/etc/apt/sources.list.d/spotify.list
 
 spotify:
   pkg.installed:

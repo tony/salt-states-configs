@@ -1,5 +1,5 @@
 include:
-  - gtk
+  - wm.gtk
   
 /home/{{ pillar['username'] }}/.gtkrc-2.0:
   file.managed:

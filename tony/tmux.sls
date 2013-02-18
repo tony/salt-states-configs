@@ -1,6 +1,6 @@
 include:
-  - tmux
-  - vcs.git
+  - sysutils.tmux
+  - devel.git
 
 tmux-config:
     git.latest:

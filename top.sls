@@ -1,34 +1,9 @@
 base:
     '*':
-       #- user.*
-       - bash
-       - deploy.*
-       - vcs.*
-       #- ruby
-       - vim
-       - tmux
-       - fortune
-       - markup.*
-       - salt.minion
-       #- projects.*
-       - tools
-       - php
-       - php.nginx
-       - mysql
+      - editors
     'wuwei':
-       - salt.master
-       #- study.*
-       - projects.*
-       - gtk_theme
-       - awesome
-       - playonlinux
-       #- nodejs
-       #- nodejs.phantomjs
-       - spotify
-       - media.*
-       - ibus
-       - rxvt-unicode
-       - hulu
+      - salt.master
+      - tony.*
 
 # cleansys 
 # sudo rm -rf ~/.bashrc ~/.bashprompt ~/.tmux.conf ~/.tmux ~/.fonts ~/.config/awesome ~/.vim ~/.vimrc \

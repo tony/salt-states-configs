@@ -1,6 +1,6 @@
 include:
-  - vcs.git
-  - vim
+  - devel.git
+  - editors.vim
 
 vim-config:
    git.latest:
