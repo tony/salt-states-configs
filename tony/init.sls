@@ -1,3 +1,6 @@
+include:
+  - webserver
+
 tony:
   user.present:
     - fullname: {{ pillar['fullname'] }}
@@ -5,12 +8,17 @@ tony:
     - home: /home/{{ pillar['username'] }}
     - gid_from_name: true
     - groups:
-      - wheel
-      - storage
       - games
-      - netdev
       - audio
       - www-data
-      - nginx
       - mysql
       - staff
+      - adm
+      - sudo
+      - plugdev
+      - lpadmin
+      - sambashare
+      - netdev
+      - cdrom
+  require:
+    - group: www-data
