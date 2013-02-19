@@ -15,4 +15,3 @@ mysql-client:
       - pkg: mysql-client
     - require_in:
       - file: /etc/mysql/conf.d
-

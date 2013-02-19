@@ -13,8 +13,7 @@ nginx:
 
 {{ pillar['etc_dir'] }}nginx/nginx.conf:
   file.managed:
-    - source: salt://nginx/etc/nginx/nginx.conf
+    - source: salt://www/nginx/etc/nginx/nginx.conf
     - user: root
     - group: root
     - mode: 644
-
