@@ -74,3 +74,5 @@ Borrows from
   vim: vim_bin variable, update alternatives. mysql state.
 - ports structure:
   http://ftp.netbsd.org/pub/pkgsrc/current/pkgsrc/README.html
+- Xdefaults colors from thayer,
+  https://bbs.archlinux.org/viewtopic.php?pid=652524#p652524
