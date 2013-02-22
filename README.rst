@@ -65,13 +65,20 @@ Salt core TODO ideas
 - enhanced pip.installed editable support
   https://github.com/saltstack/salt/issues/3751
 
+Salt contrib project ideas
+--------------------------
+
+- urwid command and control for salt states, pillars, grains, masters and
+  minions.
+
+
 Borrows from
 ------------
 
 - https://github.com/bclermont/states
 - https://github.com/rentalita/ubuntu-setup - medibuntu, some nginx
-- https://github.com/jollyroger/salt-states/blob/master/vim/init.sls -
-  vim: vim_bin variable, update alternatives. mysql state.
+- https://github.com/jollyroger/salt-states/blob/master/vim/init.sls
+- set vim_bin variable, update alternatives. mysql state.
 - ports structure:
   http://ftp.netbsd.org/pub/pkgsrc/current/pkgsrc/README.html
 - Xdefaults colors from thayer,
