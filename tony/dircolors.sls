@@ -10,11 +10,6 @@ dircolors-solarized:
      - require:
        - pkg: git
 
-#dircolors-solarized-perms:
-  #cmd.run:
-    #- name: chmod -R 755 /home/{{ pillar['username'] }}/.dircolors-solarized
-    #- runas: {{ pillar['username'] }}
-
 /home/{{ pillar['username'] }}/.dircolors-solarized:
   file.directory:
     - user: {{ pillar['username'] }}
