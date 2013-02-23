@@ -1,6 +1,6 @@
 include:
-  - php
-  - nginx
+  - lang.php
+  - www.nginx
 
 extend:
   php:

@@ -7,7 +7,7 @@ nginx:
     - reload: True
     - watch:
       - file: {{ pillar['etc_dir'] }}nginx/nginx.conf
-      - file: {{ pillar['etc_dir'] }}nginx/sites-available/*
+      - file: {{ pillar['etc_dir'] }}nginx/sites-enabled/*
   require:
     - file: {{ pillar['etc_dir'] }}nginx/nginx.conf
 
