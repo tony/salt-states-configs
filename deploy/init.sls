@@ -1,5 +1,5 @@
 ssh_config:
-  file.managed:
+  file.append:
     - name: /root/.ssh/config
     - source: salt://deploy/ssh_config
     - makedirs: True

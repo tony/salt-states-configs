@@ -19,7 +19,7 @@ php:
 /etc/php5/fpm/php.ini:
   file:
     - managed
-    - source: salt://php/etc/php5/fpm/php.fpm.ini
+    - source: salt://lang/php/etc/php5/fpm/php.fpm.ini
     - user: root
     - group: root
     - mode: 644
@@ -30,7 +30,7 @@ php:
 /etc/php5/fpm/pool.d/www.conf:
   file:
     - managed
-    - source: salt://php/etc/php5/fpm/pool.d/www.conf
+    - source: salt://lang/php/etc/php5/fpm/pool.d/www.conf
     - user: root
     - group: root
     - mode: 644
