@@ -56,3 +56,4 @@ mysql-server:
     - name: mysql
     - require:
       - pkg: mysql-server
+      - pkg: mysql-client
