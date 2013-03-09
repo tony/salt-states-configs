@@ -133,8 +133,8 @@ Xft.antialias: 1
 Xft.rgba: rgb
 
 !! --- Cursor ---
-Xcursor.theme: Vanilla-DMZ-AA 
-Xcursor.size: 48
+!! Xcursor.theme: Vanilla-DMZ-AA 
+!! Xcursor.size: 48
 
 
 !! source: https://github.com/lkraav/dotfiles/blob/master/.Xresources
