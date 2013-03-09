@@ -1,0 +1,45 @@
+session:
+        name: "saltstack"
+        windows:
+          - name: "sys"
+            clear: true
+            options:
+              synchronize-panes: true
+            root: "~/"
+            filters:
+              before:
+                - "echo 'let’s use ruby-1.9.2 for each split in this window.'"
+                - "rvm use 1.9.3"
+            splits:
+              [splits list]
+          - name: "salt-split"
+            layout: main-vertical
+            root: "/srv/salt"
+            splits:
+              - cmd: "pwd"
+                width: 50 
+                height: 100
+                target: "left"
+              - cmd: "pwd"
+                height: 50
+                width: 100
+                target: "right"
+          - name: "srv-salt"
+            root: "/srv/salt"
+            #layout: main-vertical
+            layout: 5e7a,170x51,0,0[170x30,0,0,170x20,0,31{84x20,0,31,85x20,85,31}]
+            splits:
+              - cmd: "pwd"
+                width: 100 
+                height: 50
+                target: "top"
+              - cmd: "pwd"
+                height: 50
+                width: 50
+                target: "bottom-right"
+              - cmd: "pwd"
+                height: 50
+                width: 50
+                target: "bottom-left"
+                #    splits:
+                #      [splits list]

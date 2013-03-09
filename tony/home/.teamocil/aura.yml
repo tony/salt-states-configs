@@ -1,0 +1,99 @@
+session:
+        name: "aura"
+        windows:
+          - name: "sys"
+            clear: true
+            options:
+              synchronize-panes: true
+            root: "~/"
+            filters:
+              before:
+                - "echo 'let’s use ruby-1.9.2 for each split in this window.'"
+                - "rvm use 1.9.3"
+            splits:
+              [splits list]
+          - name: "aura"
+            #layout: tiled
+            #layout: main-vertical
+            root: "~/www/aura/aura"
+            layout: 5e7a,170x51,0,0[170x30,0,0,170x20,0,31{84x20,0,31,85x20,85,31}]
+            splits:
+              - cmd: "pwd"
+                width: 100 
+                height: 50
+                target: "top"
+              - cmd: "pwd"
+                height: 50
+                width: 50
+                target: "bottom-right"
+              - cmd: "pwd"
+                height: 50
+                width: 50
+                target: "bottom-left"
+          - name: "aurax"
+            root: "~/www/aura/aura-express"
+            #layout: main-vertical
+            layout: 5e7a,170x51,0,0[170x30,0,0,170x20,0,31{84x20,0,31,85x20,85,31}]
+            splits:
+              - cmd: "pwd"
+                width: 100 
+                height: 50
+                target: "top"
+              - cmd: "pwd"
+                height: 50
+                width: 50
+                target: "bottom-right"
+              - cmd: "pwd"
+                height: 50
+                width: 50
+                target: "bottom-left"
+                #    splits:
+                #      [splits list]
+          - name: "aurax-demo"
+            root: "~/www/aura/aura-express-example"
+            layout: 5e7a,170x51,0,0[170x30,0,0,170x20,0,31{84x20,0,31,85x20,85,31}]
+            splits:
+              - cmd: "pwd"
+                width: 100 
+                height: 50
+                target: "top"
+              - cmd: "pwd"
+                height: 50
+                width: 50
+                target: "bottom-right"
+              - cmd: "pwd"
+                height: 50
+                width: 50
+                target: "bottom-left"
+          - name: "aurax-docs"
+            root: "~/www/aura/aura-docs"
+            layout: 5e7a,170x51,0,0[170x30,0,0,170x20,0,31{84x20,0,31,85x20,85,31}]
+            splits:
+              - cmd: "pwd"
+                width: 100 
+                height: 50
+                target: "top"
+              - cmd: "pwd"
+                height: 50
+                width: 50
+                target: "bottom-right"
+              - cmd: "pwd"
+                height: 50
+                width: 50
+                target: "bottom-left"
+          - name: "bb-fundamentals"
+            root: "~/www/backbone-fundamentals"
+            layout: 5e7a,170x51,0,0[170x30,0,0,170x20,0,31{84x20,0,31,85x20,85,31}]
+            splits:
+              - cmd: "pwd"
+                width: 100 
+                height: 50
+                target: "top"
+              - cmd: "pwd"
+                height: 50
+                width: 50
+                target: "bottom-right"
+              - cmd: "pwd"
+                height: 50
+                width: 50
+                target: "bottom-left"
