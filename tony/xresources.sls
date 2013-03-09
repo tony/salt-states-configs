@@ -1,10 +1,3 @@
-/home/{{ pillar['username'] }}/.Xdefaults:
-  file.managed:
-    - source: salt://tony/home/.Xdefaults
-    - user: {{ pillar['username'] }}
-    - group: {{ pillar['username'] }}
-    - mode: 755
-
 /home/{{ pillar['username'] }}/.Xresources:
   file.managed:
     - source: salt://tony/home/.Xresources
