@@ -120,6 +120,7 @@ URxvt*scrollBar_right: false
 URxvt*scrollBar: false
 
 URxvt.perl-ext-common: default,matcher,tabbed
+URxvt.tabbed.tabbar-bg: -1
 
 
 !! --- Fonts ---
