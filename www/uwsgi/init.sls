@@ -1,6 +1,8 @@
 uwsgi:
-  pkg:
-    - installed
+  pkg.installed:
+    - names:
+      - uwsgi-core
+      - uwsgi-plugin-python
 
 /etc/logrotate.d/uwsgi:
   file.managed:
