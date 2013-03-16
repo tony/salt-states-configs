@@ -13,7 +13,7 @@ awesome-config:
 
 awesome-config-autorun:
   file.managed:
-    - name: /home/{{ pillar['username'] }}/.config/awesome/autorun.lua:
+    - name: /home/{{ pillar['username'] }}/.config/awesome/autorun.lua
     - source: salt://tony/home/.config/awesome/autorun.lua
     - user: {{ pillar['username'] }}
     - group: {{ pillar['username'] }}
