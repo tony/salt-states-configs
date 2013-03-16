@@ -1,8 +1,11 @@
 base:
-    '*':
+  '*':
       - editors
-    'wuwei':
+  'wuwei':
       - salt.master
+      - tony.*
+  'x200t':
+      - salt.minion
       - tony.*
 
 # cleansys 
