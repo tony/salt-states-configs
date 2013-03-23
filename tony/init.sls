@@ -20,5 +20,6 @@ tony:
       - sambashare
       - netdev
       - cdrom
+      - vboxusers
   require:
     - group: www-data
