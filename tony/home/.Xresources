@@ -103,13 +103,13 @@ xterm*toolBar: false
 
 !! --- URxvt ---
 #URxvt*font: xft:monospace:size=9
-URxvt.font:xft:Inconsolata-12,xft:Monaco-9:antialias=False,xft:Terminus-10,xft:DejaVu Sans Mono,xft:WenQuanYi Micro Hei:pixelsize=12:antialias=True,xft:WenQuanYi Zen Hei:pixelsize=12:antialias=False,xft:Code2000:pixelsize=12:antialias=False
-URxvt.boldFont:xft:Inconsolata-12,xft:Monaco-9:antialias=False,xft:Terminus-10,xft:DejaVu Sans Mono,xft:WenQuanYi Micro Hei:pixelsize=12:antialias=True,xft:WenQuanYi Zen Hei:pixelsize=12:antialias=False,xft:Code2000:pixelsize=12:antialias=False
+URxvt.font:xft:Terminus-11:hint=True:antialias=False,xft:WenQuanYi Micro Hei:pixelsize=14:antialias=False
+URxvt.boldFont:xft:Terminus-11:bold:hint=True:antialias:False,xft:WenQuanYi Micro Hei:pixelsize=11:antialias=True,xft:Code2000:pixelsize=12:antialias=False
 URxvt*intensityStyles: false
 URxvt*internalBorder: 1
 URxvt.keysym.C-plus: command:\033]710;xft:monospace:size=9\007\033]711;xft:monospace:size=9\007
 URxvt.keysym.C-minus: command:\033]710;xft:monospace:size=8\007\033]711;xft:monospace:size=8\007
-URxvt*letterSpace: -1
+#URxvt*letterSpace: -1
 URxvt*transparent: true
 URxvt*.shading:  25
 
