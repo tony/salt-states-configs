@@ -31,14 +31,14 @@ Setup
 .. code:: yaml
 
     pillar_roots:
-    base:
-        - /srv/salt/base/pillar
-        - /srv/salt/private/pillar
+        base:
+            - /srv/salt/base/pillar
+            - /srv/salt/private/pillar
 
     file_roots:
-    base:
-        - /srv/salt/base
-        - /srv/salt/private
+        base:
+            - /srv/salt/base
+            - /srv/salt/private
 
 There may not be a need to follow the structure above, but I do it to
 separate private from contrib salt states.
