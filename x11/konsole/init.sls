@@ -1,0 +1,3 @@
+htop:
+  pkg.installed:
+    - htop
