@@ -1,5 +1,7 @@
 include:
   - webserver
+  - databases.mysql.group
+  - emulators.virtualbox.group
 
 tony:
   user.present:
@@ -21,5 +23,7 @@ tony:
       - netdev
       - cdrom
       - vboxusers
-  require:
-    - group: www-data
+    - require:
+      - group: www-data
+      - group: vboxusers_group
+      - group: mysql_group
