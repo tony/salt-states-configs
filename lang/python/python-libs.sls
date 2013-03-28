@@ -12,6 +12,7 @@ python2:
     - names:
       - python2.7
       - python-dev
+      - python-pip
 
 
 virtualenv:
