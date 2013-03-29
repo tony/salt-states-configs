@@ -4,6 +4,6 @@ include:
 skype:
   pkg:
     - installed
-  require:
-    - file: canonical-partner-repo
-    - file: canonical-partner-repo-src
+    - require:
+      - file: canonical-partner-repo
+      - file: canonical-partner-repo-src
