@@ -1,0 +1,3 @@
+ncmpcpp:
+  pkg:
+    - installed
