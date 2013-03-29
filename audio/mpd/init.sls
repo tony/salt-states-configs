@@ -1,0 +1,3 @@
+mpd:
+  pkg:
+    - installed
