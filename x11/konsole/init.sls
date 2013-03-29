@@ -1,3 +1,3 @@
-htop:
+konsole:
   pkg.installed:
-    - htop
+    - konsole
