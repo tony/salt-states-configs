@@ -1,0 +1,2 @@
+cmake:
+  pkg.latest

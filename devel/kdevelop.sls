@@ -1,2 +1,7 @@
+include:
+  - devel.cmake
+  
 kdevelop:
-  pkg.latest
+  pkg.latest:
+    - require:
+      - pkg: cmake
