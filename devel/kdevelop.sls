@@ -1,0 +1,2 @@
+kdevelop:
+  pkg.latest
