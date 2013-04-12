@@ -4,7 +4,7 @@ include:
 nodejs:
    cmd.wait:
     - name: /usr/bin/add-apt-repository -y ppa:chris-lea/node.js
-    - unless: apt-key list | grep -q chrislea
+    - unless: apt-key list | grep chrislea
     - require:
       - pkg: python-software-properties
    pkg:
