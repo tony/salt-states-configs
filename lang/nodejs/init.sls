@@ -1,10 +1,10 @@
 include:
-  - python.python-libs
+  - lang.python.python-libs
 
 nodejs:
    cmd.wait:
     - name: /usr/bin/add-apt-repository -y ppa:chris-lea/node.js
-    - unless: apt-key list | grep -q C7917B12
+    - unless: apt-key list | grep -q chrislea
     - require:
       - pkg: python-software-properties
    pkg:
