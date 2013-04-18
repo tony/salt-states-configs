@@ -20,11 +20,6 @@ chinese-fonts:
     - names:
       - ttf-wqy-microhei
 
-windows-fonts:
-  pkg.installed:
-    - names:
-      - ttf-mscorefonts-installer
-
 flush-font-cache:
   cmd.run:
     - name: fc-cache -f
