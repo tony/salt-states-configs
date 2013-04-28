@@ -1,7 +1,7 @@
 include:
   - webserver
   - www.nginx
-  - tony
+  - lang.php
 
 phpmyadmin:
   pkg.installed:
