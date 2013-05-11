@@ -16,5 +16,6 @@ playonlinux:
     - names:
       - playonlinux
       - p7zip-full
+      - xterm
     - require:
       - cmd: playonlinux
