@@ -1,3 +1,3 @@
 konsole:
-  pkg.installed:
-    - konsole
+  pkg:
+    - latest
