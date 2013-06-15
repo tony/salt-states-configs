@@ -135,21 +135,4 @@ if [ -d $HOME/.dircolors-solarized ]; then
     eval `dircolors $HOME/.dircolors-solarized/dircolors.256dark`
 fi
 
-# TMUX
-if which tmux 2>&1 >/dev/null; then
-
-    # when quitting tmux, try to attach
-    while test -z ${TMUX}; do
-        tmux attach || break
-    done
-
-    # if no session is started, start a new session
-    test -z ${TMUX} && tmux
-
-    if which teamocil 2>&1 > /dev/null; then
-        complete -W "$(teamocil --list)" teamocil
-    fi
-
-fi
-
 alias killsalt='sudo service salt-minion stop && sudo service salt-master stop && sudo pkill -9 salt-minion && sudo pkill -9 salt-master'
