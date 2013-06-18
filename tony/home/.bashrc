@@ -113,8 +113,8 @@ if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
     . /usr/local/bin/virtualenvwrapper.sh
 fi
 
-if [ -f $HOME/.rvm/scripts/rvm ]; then
-    . $HOME/.rvm/scripts/rvm
+if [ -f /usr/local/rvm/scripts/rvm ]; then
+    . /usr/local/rvm/scripts/rvm
 fi
 
 export PERLBREW_ROOT=$HOME/.perl5/perlbrew
@@ -134,5 +134,7 @@ export TERM=screen-256color
 if [ -d $HOME/.dircolors-solarized ]; then
     eval `dircolors $HOME/.dircolors-solarized/dircolors.256dark`
 fi
+
+
 
 alias killsalt='sudo service salt-minion stop && sudo service salt-master stop && sudo pkill -9 salt-minion && sudo pkill -9 salt-master'
