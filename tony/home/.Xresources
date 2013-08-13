@@ -1,51 +1,10 @@
-! Molokai theme
-*urxvt*background: #101010
-*urxvt*foreground: #d0d0d0
-*urxvt*cursorColor: #d0d0d0
-*urxvt*color0: #101010
-*urxvt*color1: #960050
-*urxvt*color2: #66aa11
-*urxvt*color3: #c47f2c
-*urxvt*color4: #30309b
-*urxvt*color5: #7e40a5
-*urxvt*color6: #3579a8
-*urxvt*color7: #9999aa
-*urxvt*color8: #303030
-*urxvt*color9: #ff0090
-*urxvt*color10: #80ff00
-*urxvt*color11: #ffba68
-*urxvt*color12: #5f5fee
-*urxvt*color13: #bb88dd
-*urxvt*color14: #4eb4fa
-*urxvt*color15: #d0d0d0
-
-!! --- XLock ---
-XLock.clock.count: 1
-XLock.clock.size: 0
-XLock.description: False
-Xlock.echokeys: True
-XLock.echokey: *
-XLock.erasemode: no_fade
-
-!! --- Xterm ---
-xterm*boldColors: false
-xterm*borderWidth: 0 
-xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
-xterm*cursorBlind: true
-xterm*cutNewLine: false
-xterm*dynamicColors: true
-xterm*faceName: monospace
-xterm*faceSize: 10 
-xterm*internalBorder: 4
-xterm*pointerMode: 2
-xterm*renderFont: true
-xterm*selectToClipboard: true
-xterm*termName: xterm-256color
-xterm*toolBar: false
-
+URxvt.foreground:       white
+URxvt.background:       black
+URxvt.font:             xft:Terminus,xft:WenQuanYi Zen Hei Mono,xft:unifont,xft:Symbola
+URxvt.boldFont:         xft:Terminus,xft:WenQuanYi Zen Hei Mono,xft:unifont,xft:Symbola
 !! --- URxvt ---
-URxvt.font:xft:Source Code Pro-11:xft:Terminus-11:hint=True:antialias=False,xft:WenQuanYi Micro Hei:pixelsize=14:antialias=False
-URxvt.boldFont:xft:Source Code Pro-11:xft:Terminus-11:bold:hint=True:antialias:False,xft:WenQuanYi Micro Hei:pixelsize=11:antialias=True,xft:Code2000:pixelsize=12:antialias=False
+!!URxvt.font:xft:Source Code Pro-10:xft:Terminus-11:hint=True:antialias=False,xft:WenQuanYi Micro Hei:pixelsize=14:antialias=False
+!!URxvt.boldFont:xft:Source Code Pro-10:xft:Terminus-11:bold:hint=True:antialias:False,xft:WenQuanYi Micro Hei:pixelsize=11:antialias=True,xft:Code2000:pixelsize=12:antialias=False
 URxvt*intensityStyles: false
 URxvt*internalBorder: 1
 URxvt.keysym.C-plus: command:\033]710;xft:monospace:size=9\007\033]711;xft:monospace:size=9\007
@@ -61,21 +20,54 @@ URxvt*scrollBar: false
 
 URxvt.perl-ext-common: default,matcher,tabbed
 URxvt.tabbed.tabbar-bg: -1
+URxvt.scrollBar:        false
+URxvt.urgentOnBell:     true
+URxvt.imLocale:         en_GB.UTF-8
+URxvt.cursorBlink:      true
+URxvt.cursorColor:      #ff9900
+URxvt.cursorColor2:     #000000
+URxvt.colorBD:          #ffffff
+URxvt.colorIT:          #bbbbbb
+URxvt.colorUL:          #ff9900
+URxvt.underlineColor:   #999999
+URxvt.borderless:       true
+URxvt*perl-ext-common:  default,matcher
+URxvt*urlLauncher:      x-www-browser
+URxvt*matcher.button:   1
+URxvt.searchable-scrollback: CM-s
 
+! babilen colour
+!
+! black
+!
+*color0:    #262729
+*color8:    #554444
 
-!! --- Fonts ---
-!! https://wiki.archlinux.org/index.php/Font_Configuration
-Xft.autohint: 0
-Xft.lcdfilter:  lcddefault
-Xft.hintstyle:  hintslight
-Xft.hinting: 1
-Xft.antialias: 1
-Xft.rgba: rgb
+!red
+*color1:    #F92672
+*color9:    #FF669D
 
-!! --- Cursor ---
-!! Xcursor.theme: Vanilla-DMZ-AA 
-!! Xcursor.size: 48
+!green
+*color2:    #A6E22E
+*color10:   #BEED5F
 
+!yellow
+*color3:    #FD971F
+*color11:   #FD971F
 
-!! source: https://github.com/lkraav/dotfiles/blob/master/.Xresources
-!! color source: https://github.com/baskerville/xresources-color-schemes
+!blue
+*color4:    #4682B4
+*color12:   #4682B4
+
+!!magenta
+*color5:    #AE81FF
+*color13:   #AE81FF
+
+! cyan
+*color6:    #89b6e2
+*color14:   #46a4ff
+
+! white
+*color7:    #FFFFFF
+*color15:   #FFFFFF
+
