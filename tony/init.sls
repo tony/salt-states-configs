@@ -5,7 +5,7 @@ include:
 
 tony:
   user.present:
-    - fullname: {{ pillar['fullname'] }}
+    - fullname: {{ pillar.get('fullname', pillar.get('username', 'user')) }}
     - shell: /bin/bash
     - home: /home/{{ pillar['username'] }}
     - gid_from_name: true
