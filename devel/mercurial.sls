@@ -5,4 +5,3 @@ mercurial:
 hg:
   pkg.installed:
     - name: mercurial
-    
