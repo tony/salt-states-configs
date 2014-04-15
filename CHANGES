@@ -11,5 +11,7 @@ Here you can find the recent changes to tony/salt-states-config.
 - Updated ``top.sls`` to give absolute path to ``editors.vim`` module
   as states within aren't automtically detected anymore. A ``init.sls``
   with ``include`` directives is required.
+- Move ``mercurial.git`` (and its' alias ``hg.git``), ``git.sls`` to the
+  ``./vcs/`` folder.
 
 .. todo:: # vim: set filetype=rst:
