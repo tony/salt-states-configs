@@ -13,5 +13,10 @@ Here you can find the recent changes to tony/salt-states-config.
   with ``include`` directives is required.
 - Move ``mercurial.git`` (and its' alias ``hg.git``), ``git.sls`` to the
   ``./vcs/`` folder.
+- For version `Version 0.16.0`_, use relative includes. Changes:
+
+  - ``vcs/hg.sls``
+
+.. _Version 0.16.0: http://docs.saltstack.com/en/latest/topics/releases/0.16.0.html
 
 .. todo:: # vim: set filetype=rst:
