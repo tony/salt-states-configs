@@ -1,0 +1,15 @@
+=========
+Changelog
+=========
+
+Here you can find the recent changes to tony/salt-states-config.
+
+
+2014-04-15
+----------
+
+- Updated ``top.sls`` to give absolute path to ``editors.vim`` module
+  as states within aren't automtically detected anymore. A ``init.sls``
+  with ``include`` directives is required.
+
+.. todo:: # vim: set filetype=rst:
