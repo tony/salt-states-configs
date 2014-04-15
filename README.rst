@@ -3,6 +3,12 @@ saltstack config files
 
 Configure a ubuntu 12.10 development environment with salt.
 
+Note
+----
+
+This repository is out of date, it is tested to work with Salt
+v0.14.0 but not beyond.
+
 For demonstration. Setting up a laptop / server / work env in pure
 saltstack states.
 
