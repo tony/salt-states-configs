@@ -1,6 +1,6 @@
 base:
   '*':
-      - editors
+      - editors.*
   'wuwei':
       - salt.master
       - tony.*
