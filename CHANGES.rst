@@ -7,7 +7,8 @@ Here you can find the recent changes to tony/salt-states-config.
 2014-04-16
 ----------
 
-- Redo ./salt sls files off of https://github.com/saltstack-formulas/salt-formula.
+- Update ./salt sls based on https://github.com/saltstack-formulas/salt-formula.
+- Update ./www/uwsgi based on https://github.com/wunki/django-salted/tree/master/salt/roots/salt/uwsgi.
 - Fix package names in uwsgi/supervisor
 
 
