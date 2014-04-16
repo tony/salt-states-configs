@@ -1,16 +1,18 @@
 saltstack config files
 ======================
 
-Configure a ubuntu 12.10 development environment with salt.
+Former: Configure a ubuntu 12.10 development environment with salt `v0.14.0`_.
 
-Note
-----
+Ongoing: Transitioning to debian 8.0 (jessie / testing) with release
+`2014.1.1`_.
 
-This repository is out of date, it is tested to work with Salt
-v0.14.0 but not beyond.
+See the `CHANGES.rst`_ file.
 
-For demonstration. Setting up a laptop / server / work env in pure
-saltstack states.
+.. _2014.1.1: http://docs.saltstack.com/en/latest/topics/releases/2014.1.1.html
+.. _v0.14.0: http://docs.saltstack.com/en/latest/topics/releases/0.14.0.html
+
+.. _CHANGES.rst: https://github.com/tony/salt-states-configs/blob/master/CHANGES
+
 
 Features
 --------
