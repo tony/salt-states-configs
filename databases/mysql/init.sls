@@ -3,6 +3,6 @@
 # percona.
 
 include:
-  - salt.minion.mysql
+  - salt.mysql
   - databases.mysql.server
   - databases.mysql.config
