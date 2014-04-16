@@ -11,7 +11,7 @@ See the `CHANGES.rst`_ file.
 .. _2014.1.1: http://docs.saltstack.com/en/latest/topics/releases/2014.1.1.html
 .. _v0.14.0: http://docs.saltstack.com/en/latest/topics/releases/0.14.0.html
 
-.. _CHANGES.rst: https://github.com/tony/salt-states-configs/blob/master/CHANGES
+.. _CHANGES.rst: https://github.com/tony/salt-states-configs/blob/master/CHANGES.rst
 
 
 Features
