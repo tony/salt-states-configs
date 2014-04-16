@@ -13,16 +13,6 @@ logs_dir: /var/log/
 
 www_dir: /srv/www/
 
-
-study: 
-  node:
-    git: {
-      node-querystring: 'https://github.com/visionmedia/node-querystring.git',
-      highlight.js: 'https://github.com/isagalaev/highlight.js.git',
-      thrift: 'https://github.com/apache/thrift.git',
-      thrift-python-node-example: 'https://github.com/likwid/thrift-python-node-example.git'
-    }
-
 mysql-version: 5.5
 
 # vim: filetype=sls
