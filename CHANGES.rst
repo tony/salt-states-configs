@@ -21,5 +21,3 @@ Here you can find the recent changes to tony/salt-states-config.
   - databases.postgresql based off saltstack-formulas/postgres-formulas
 
 .. _Version 0.16.0: http://docs.saltstack.com/en/latest/topics/releases/0.16.0.html
-
-.. todo:: # vim: set filetype=rst:
