@@ -19,5 +19,6 @@ Here you can find the recent changes to tony/salt-states-config.
 - New packages
 
   - databases.postgresql based off saltstack-formulas/postgres-formulas
+- Fix package names in uwsgi/supervisor
 
 .. _Version 0.16.0: http://docs.saltstack.com/en/latest/topics/releases/0.16.0.html
