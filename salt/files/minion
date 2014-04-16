@@ -614,3 +614,5 @@ pillar_roots:
 ############################################
 # Location of the repository cache file on the master
 {{ get_config('win_repo_cachefile', 'salt://win/repo/winrepo.p') }}
+
+# vim: set ft=sls:

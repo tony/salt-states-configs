@@ -803,3 +803,4 @@ halite:
   {%- endfor %}
 {%- endif %}
 
+# vim: set ft=sls:
