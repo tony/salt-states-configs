@@ -29,7 +29,7 @@ uwsgi:
     
 /etc/init/uwsgi.conf:
   file.managed:
-    - source: salt://uwsgi/uwsgi.conf
+    - source: salt://www/uwsgi/uwsgi.conf
     - template: jinja
     - require:
       - pip: uwsgi
