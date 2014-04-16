@@ -1,4 +1,4 @@
-{% from "postgresql/map.jinja" import postgres with context %}
+{% from "databases/postgresql/map.jinja" import postgres with context %}
 
 postgresql:
   pkg:
