@@ -1,6 +1,6 @@
 include:
-  - sysutils.uwsgi
-  - www.supervisor
+  - www.uwsgi
+  - sysutils.supervisor
 
 /etc/supervisor/supervisord.conf:
   file.managed:
