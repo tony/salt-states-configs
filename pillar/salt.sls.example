@@ -9,6 +9,10 @@ salt:
     file_roots:
       base:
         - /srv/salt
+    pillar_roots:
+      base:
+        - /srv/salt/pillar
+
   minion:
     master: salt
     module_config:
