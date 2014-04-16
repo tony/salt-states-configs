@@ -31,7 +31,7 @@ Setup
 
 .. code:: bash
 
-   git clone https://github.com/tony/salt-states-configs.git /srv/salt/base
+   git clone https://github.com/tony/salt-states-configs.git /srv/salt/salt-states-tony
 
 
 ``/etc/salt/master``:
@@ -40,13 +40,11 @@ Setup
 
     pillar_roots:
         base:
-            - /srv/salt/base/pillar
-            - /srv/salt/private/pillar
+            - /srv/salt/salt-states-tony/pillar
 
     file_roots:
         base:
-            - /srv/salt/base
-            - /srv/salt/private
+            - /srv/salt/salt-states-tony
 
 There may not be a need to follow the structure above, but I do it to
 separate private from contrib salt states.
