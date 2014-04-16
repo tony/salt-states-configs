@@ -6,5 +6,5 @@ include:
   file.managed:
     - source: salt://www/uwsgi/etc/supervisor/supervisord.conf
     - require:
-      - pkg: uwsgi
+      - pip: uwsgi
       - pkg: supervisor
