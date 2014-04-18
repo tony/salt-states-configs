@@ -1,0 +1,14 @@
+mysql:
+  server:
+    bind-address: 127.0.0.1
+    port: 3306
+    user: mysql
+
+  # Override any names defined in map.jinja
+  lookup:
+    server: mysql-server
+    client: mysql-client
+    # server is in map.jinja
+    # service: mysql-service
+    config: /etc/mysql/my.cnf
+    python: python-mysqldb
