@@ -4,6 +4,12 @@ Changelog
 
 Here you can find the recent changes to tony/salt-states-config.
 
+2014-04-18
+----------
+
+- Update ./databases/mysql based on https://github.com/saltstack-formulas/mysql-formula.
+- Remove old ./deploy dir and states
+
 2014-04-16
 ----------
 

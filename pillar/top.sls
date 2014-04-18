@@ -2,3 +2,4 @@ base:
   '*':
     - settings
     - salt
+    - mysql
