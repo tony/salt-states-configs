@@ -1,0 +1,65 @@
+session:
+        name: "saltstack"
+        windows:
+          - name: "sys"
+            clear: true
+            root: "~/"
+            filters:
+              before:
+                - "echo 'let’s use ruby-1.9.2 for each split in this window.'"
+                - "rvm use 1.9.3"
+            splits:
+              [splits list]
+          - name: "salt-split"
+            layout: c89c,159x75,0,0[159x48,0,0{79x48,0,0,79x48,80,0},159x27,0,49]
+            root: "/srv/salt"
+            splits:
+              - cmd: "sudo -i `source /home/tony/.virtualenvs/salt/bin/activate`"
+                width: 50 
+                height: 50
+                target: "top-left"
+              - cmd: "sudo -i `source /home/tony/.virtualenvs/salt/bin/activate`"
+                width: 50
+                height: 50
+                target: "top-right"
+              - cmd: "sudo -i `source /home/tony/.virtualenvs/salt/bin/activate`"
+                width: 100
+                height: 50
+                target: "bottom"
+          - name: "srv-salt"
+            root: "/srv/salt"
+            layout: 5e7a,170x51,0,0[170x30,0,0,170x20,0,31{84x20,0,31,85x20,85,31}]
+            splits:
+              - cmd: "pwd"
+                width: 100 
+                height: 50
+                target: "top"
+              - cmd: "pwd"
+                height: 50
+                width: 50
+                target: "bottom-right"
+              - cmd: "pwd"
+                height: 50
+                width: 50
+                target: "bottom-left"
+                #    splits:
+                #      [splits list]
+          - name: "srv-edit"
+            root: "/home/tony/study/python/salt"
+            #layout: main-vertical
+            layout: 5e7a,170x51,0,0[170x30,0,0,170x20,0,31{84x20,0,31,85x20,85,31}]
+            splits:
+              - cmd: "pwd"
+                width: 100 
+                height: 50
+                target: "top"
+              - cmd: "pwd"
+                height: 50
+                width: 50
+                target: "bottom-right"
+              - cmd: "pwd"
+                height: 50
+                width: 50
+                target: "bottom-left"
+                #    splits:
+                #      [splits list]
