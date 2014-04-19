@@ -1,5 +1,5 @@
 deploy/id_rsa
 deploy/id_rsa.pub
 
-pillar/settings.sls
-pillar/*.sls
+roots/pillar/settings.sls
+roots/pillar/*.sls
