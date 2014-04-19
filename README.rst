@@ -17,22 +17,30 @@ See the `CHANGES.rst`_ file.
 Features
 --------
 
-* vim (my vim config at http://github.com/tony/vim-config)
-* awesome (my awesome config http://github.com/awesome-config)
-* rxvt-unicode - custom ``Xdefaults`` w/ support for chinese characater
-  and ibus for pinyin.
-* pixel fonts, unicode fonts
-* my personal configuratinos are found in `tony` state, if you follow
-  you may refer to this when creating states to copy your own configs
-  over.
+* Support for dot-configurations
+* Support for provisining minions
+
+Why is the structure like this?
+-------------------------------
+
+I based it off https://github.com/python/pypi-salt.
+
+``roots/`` is for anything that would be in ``file_roots`` or
+``pillar_roots``.
+
+
 
 Setup
 -----
 
+Clone the data recursively (include submodules):
+
 .. code:: bash
 
-   git clone https://github.com/tony/salt-states-configs.git /srv/salt/salt-states-tony
+   git clone --recursive https://github.com/tony/salt-states-configs.git /srv/salt/salt-states-tony
 
+
+Add the necessary ``file_roots`` and ``pillar_roots`` to your project.
 
 ``/etc/salt/master``:
 
@@ -40,43 +48,27 @@ Setup
 
     pillar_roots:
         base:
-            - /srv/salt/salt-states-tony/pillar
+            - /srv/salt/salt-states-tony/roots/pillar
 
     file_roots:
         base:
-            - /srv/salt/salt-states-tony
+            - /srv/salt/salt-states-tony/roots/salt
+            - /srv/salt/salt-states-tony/roots/formulas/users
+            - /srv/salt/salt-states-tony/roots/formulas/openssh
 
-There may not be a need to follow the structure above, but I do it to
-separate private from contrib salt states.
+Restart the salt master.
 
-Copy ``pillar/settings.sls.example`` to ``pillar/settings.sls`` and edit
-`username` and `fullname`.  The study directive is not used as of
-2013-02-03 and may be removed.
+.. code:: bash
 
-To do
------
+    $ [sudo] /etc/init.d/salt-master restart
 
-- use ports hierarchy to organize apps [in-progress]
-- separate configs from apps [done]
-- separate daemons, from text, from curses, from x11 apps [in-progress]
-- wire in study.python.salt for salt.dev pillar
-- use pillars to allow users to download their awesome, vim, etc configs
-  from vcs's like git
+Customize your pillar data in ``roots/pillar`` from the ``.example``
+files.
 
-Salt core TODO ideas
---------------------
+How to bootstrap a minion with config
+-------------------------------------
 
-- git.state to add remotes to git repos
-- jinja template support for requirements.txt on pip/virtualenv
-- enhanced pip.installed editable support
-  https://github.com/saltstack/salt/issues/3751
-
-Salt contrib project ideas
---------------------------
-
-- urwid command and control for salt states, pillars, grains, masters and
-  minions.
-
+See http://docs.saltstack.com/en/latest/topics/cloud/config.html#saltify.
 
 Borrows from
 ------------
