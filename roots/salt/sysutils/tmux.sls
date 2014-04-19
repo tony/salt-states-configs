@@ -1,3 +1,3 @@
 tmux:
-    pkg:
-      - installed
+  pkg:
+    - installed

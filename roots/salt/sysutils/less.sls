@@ -1,3 +1,3 @@
 less:
   pkg.installed:
-    - less
+    - name: less

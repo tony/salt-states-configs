@@ -11,6 +11,8 @@ Here you can find the recent changes to tony/salt-states-config.
 - Use salt-formulas for openssh https://github.com/saltstack-formulas/openssh-formula.
 - Move salt-formula to a git submodule in roots/formulas/salt.
 - Restructure salt roots for pillars and states.
+- Update sysutils/* to use correct naming conventions
+- Update shells/zsh to rely on new users formula
 
 2014-04-18
 ----------

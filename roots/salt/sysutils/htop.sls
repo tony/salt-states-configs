@@ -1,3 +1,3 @@
 htop:
   pkg.installed:
-    - htop
+    - name: htop

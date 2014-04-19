@@ -10,10 +10,18 @@
       - group
 
 # takin care of biz in a fixed width font
+{% set fonts = salt['grains.filter_by']({
+    'Debian': {
+      'inconsolata': 'fonts-inconsolata'
+    },
+    'Ubuntu': {
+      'inconsolata': 'ttf-inconsolata'
+    }
+}) %}
 fixed-width-fonts:
    pkg.installed:
      - names:
-       - ttf-inconsolata
+       - {{ fonts.inconsolata }}
 
 chinese-fonts:
   pkg.installed:

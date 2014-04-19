@@ -1,5 +1,5 @@
 exfat:
   pkg.installed:
-    - names:
+    - pkgs:
       - exfat-fuse
       - exfat-utils
