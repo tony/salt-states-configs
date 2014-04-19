@@ -53,7 +53,6 @@ Clone the data recursively (include submodules):
 
    git clone --recursive https://github.com/tony/salt-states-configs.git /srv/salt/salt-states-tony
 
-
 Add the necessary ``file_roots`` and ``pillar_roots`` to your project.
 
 ``/etc/salt/master``:
