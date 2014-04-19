@@ -4,6 +4,12 @@ Changelog
 
 Here you can find the recent changes to tony/salt-states-config.
 
+2014-04-19
+----------
+
+- User salt-formulas for users and openssh.
+- Restructure salt roots for pillars and states.
+
 2014-04-18
 ----------
 
