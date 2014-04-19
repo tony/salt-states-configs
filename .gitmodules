@@ -1,0 +1,6 @@
+[submodule "formulas/users"]
+	path = roots/formulas/users
+	url = https://github.com/saltstack-formulas/users-formula.git
+[submodule "formulas/openssh"]
+	path = roots/formulas/openssh
+	url = https://github.com/saltstack-formulas/openssh-formula.git

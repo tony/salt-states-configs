@@ -1,5 +1,0 @@
-base:
-  '*':
-    - settings
-    - salt
-    - mysql
