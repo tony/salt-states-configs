@@ -69,6 +69,7 @@ Add the necessary ``file_roots`` and ``pillar_roots`` to your project.
             - /srv/salt/salt-states-tony/roots/salt
             - /srv/salt/salt-states-tony/roots/formulas/users
             - /srv/salt/salt-states-tony/roots/formulas/openssh
+            - /srv/salt/salt-states-tony/roots/formulas/salt
 
 Restart the salt master.
 

@@ -4,3 +4,6 @@
 [submodule "formulas/openssh"]
 	path = roots/formulas/openssh
 	url = https://github.com/saltstack-formulas/openssh-formula.git
+[submodule "roots/formulas/salt"]
+	path = roots/formulas/salt
+	url = https://github.com/saltstack-formulas/salt-formula.git
