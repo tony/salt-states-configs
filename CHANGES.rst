@@ -7,7 +7,8 @@ Here you can find the recent changes to tony/salt-states-config.
 2014-04-19
 ----------
 
-- User salt-formulas for users and openssh.
+- Use salt-formulas for users https://github.com/saltstack-formulas/users-formula.
+- Use salt-formulas for openssh https://github.com/saltstack-formulas/openssh-formula.
 - Restructure salt roots for pillars and states.
 
 2014-04-18

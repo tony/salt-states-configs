@@ -23,12 +23,26 @@ Features
 Why is the structure like this?
 -------------------------------
 
-I based it off https://github.com/python/pypi-salt.
+based off https://github.com/python/pypi-salt.
 
 ``roots/`` is for anything that would be in ``file_roots`` or
 ``pillar_roots``.
 
+Also, formulas are included (at a locked version / ref) in
+``roots/formulas``. These must be added into ``file_roots`` individually.
 
+Dependency Formulae
+-------------------
+
+These are already part of this project as a submodule, but you may also
+include them in your root as ``gitfs_remotes``.
+
+For more information, see `Salt Formulas documentation`_.
+
+- https://github.com/saltstack-formulas/users-formula
+- https://github.com/saltstack-formulas/openssh-formula
+
+.. _Salt Formulas documentation: http://docs.saltstack.com/en/latest/topics/development/conventions/formulas.html
 
 Setup
 -----
@@ -81,4 +95,5 @@ Borrows from
   http://ftp.netbsd.org/pub/pkgsrc/current/pkgsrc/README.html
 - Xdefaults colors from thayer,
   https://bbs.archlinux.org/viewtopic.php?pid=652524#p652524
-- uwsgi https://github.com/uggedal
+- uwsgi https://github.com/wunki/django-salted/tree/master/salt/roots/salt/uwsgi
+- structure: https://github.com/python/pypi-salt
