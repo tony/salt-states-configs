@@ -7,6 +7,7 @@ Here you can find the recent changes to tony/salt-states-config.
 2014-04-20
 ----------
 
+- Minion configs and top.sls files now use grains to manage roles.
 - Move dot-configs to roots/
 - Move oh-my-zsh to dot-configs/zsh.sls
 - Create minion/master config example for my laptop in minions

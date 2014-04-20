@@ -3,5 +3,6 @@ base:
     - users
     - base.sanity
     - dot-configs.base
-  'x230':
+  'roles:x11':
+    - match: grain
     - base-x11.sanity
