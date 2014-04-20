@@ -1,7 +1,7 @@
 base:
   'x230':
     - x230
+  'minion1':
+    - server
   'gitlab':
     - gitlab
-  'personal_server':
-    - personal_server
