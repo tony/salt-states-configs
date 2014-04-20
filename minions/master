@@ -8,9 +8,6 @@ file_roots:
     - /home/tony/workspace/salt-states-configs/roots/formulas/ntp
     - /home/tony/workspace/salt-states-private
 
-fileserver_backend:
-  - roots
-
 pillar_roots:
   base:
     - /home/tony/workspace/salt-states-configs/roots/pillar
