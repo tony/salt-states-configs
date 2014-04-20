@@ -7,3 +7,6 @@
 [submodule "roots/formulas/salt"]
 	path = roots/formulas/salt
 	url = https://github.com/saltstack-formulas/salt-formula.git
+[submodule "roots/formulas/ntp"]
+	path = roots/formulas/ntp
+	url = https://github.com/saltstack-formulas/ntp-formula.git

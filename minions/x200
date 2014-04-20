@@ -1,0 +1,19 @@
+file_roots:
+  base:
+    - /home/tony/workspace/salt-states-configs/roots/salt
+    - /home/tony/workspace/salt-states-configs/roots/dot-configs
+    - /home/tony/workspace/salt-states-configs/roots/formulas/users
+    - /home/tony/workspace/salt-states-configs/roots/formulas/openssh
+    - /home/tony/workspace/salt-states-configs/roots/formulas/salt
+    - /home/tony/workspace/salt-states-configs/roots/formulas/ntp
+    - /home/tony/workspace/salt-states-private
+
+fileserver_backend:
+  - roots
+
+pillar_roots:
+  base:
+    - /home/tony/workspace/salt-states-configs/roots/pillar
+    - /home/tony/workspace/salt-states-private/pillar
+
+# vim: set ft=sls:

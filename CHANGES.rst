@@ -4,6 +4,14 @@ Changelog
 
 Here you can find the recent changes to tony/salt-states-config.
 
+2014-04-20
+----------
+
+- Move dot-configs to roots/
+- Move oh-my-zsh to dot-configs/zsh.sls
+- Create minion/master config example for my laptop in minions
+- Use salt-formulas for ntp https://github.com/saltstack-formulas/ntp-formula.
+
 2014-04-19
 ----------
 

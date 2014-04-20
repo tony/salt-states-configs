@@ -31,6 +31,13 @@ based off https://github.com/python/pypi-salt.
 Also, formulas are included (at a locked version / ref) in
 ``roots/formulas``. These must be added into ``file_roots`` individually.
 
+- ./roots/pillar - pillar data
+- ./roots/dot-configs - dot-config sls states
+- ./roots/salt - package sls states
+- ./roots/formulas - package sls from `saltstack-formulas`_ repository.
+
+.. _saltstack-formulas: https://github.com/saltstack-formulas
+
 Dependency Formulae
 -------------------
 
