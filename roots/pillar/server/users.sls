@@ -1,6 +1,5 @@
 users:
 
-## Full list of pillar values
   tony:
     fullname: Tony Narlock
     home: /home/tony
