@@ -73,9 +73,14 @@ Add the necessary ``file_roots`` and ``pillar_roots`` to your project.
     file_roots:
         base:
             - /srv/salt/salt-states-tony/roots/salt
+            - /srv/salt/salt-states-tony/roots/dot-configs
             - /srv/salt/salt-states-tony/roots/formulas/users
             - /srv/salt/salt-states-tony/roots/formulas/openssh
             - /srv/salt/salt-states-tony/roots/formulas/salt
+            - /srv/salt/salt-states-tony/roots/formulas/ntp
+
+Note: to see an updated, full list of formulas / roots see the
+`minions/master`_ example file.
 
 Restart the salt master.
 
@@ -85,6 +90,8 @@ Restart the salt master.
 
 Customize your pillar data in ``roots/pillar`` from the ``.example``
 files.
+
+.. _minions/master: https://github.com/tony/salt-states-configs/blob/master/minions/master
 
 How to bootstrap a minion with config
 -------------------------------------
