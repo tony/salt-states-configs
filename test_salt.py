@@ -29,9 +29,6 @@ SaltStack is Apache 2: https://github.com/saltstack/salt/blob/develop/LICENSE
 import os
 import logging
 
-import salt.log.setup
-salt.log.setup.setup_temp_logger(log_level='debug')
-
 try:
     import salt
 except ImportError:
@@ -42,34 +39,33 @@ except ImportError:
     """)
 
 
-import salt.loader
-"""Temporary __builtins__ workaround until saltstack is refactored to handle
-importing modules pythonically."""
-# global salt functions
-__builtins__.__salt__ = {
-    'cmd.run': salt.modules.cmdmod._run_quiet,
-    'cmd.run_all': salt.modules.cmdmod.run_all
-}
+def bootstrap_python():
+    """
+    Temporary __builtins__ workaround until saltstack is refactored to handle
+    importing modules pythonically.
+    """
 
+    import salt.log.setup
+    from salt.config import DEFAULT_MASTER_OPTS
+    salt.log.setup.setup_temp_logger(log_level='debug')
 
-# settings / system specs for whatever system command is being ran on
-__builtins__.__grains__ = {}
-# options
-from salt.config import DEFAULT_MASTER_OPTS
-__builtins__.__opts__ = DEFAULT_MASTER_OPTS
+    __builtins__.__salt__ = {
+        'cmd.run': salt.modules.cmdmod._run_quiet,
+        'cmd.run_all': salt.modules.cmdmod.run_all
+    }
 
-__builtins__.__salt__.update(
-    salt.loader.minion_mods(
-        __opts__
+    __builtins__.__grains__ = {}
+    __builtins__.__opts__ = DEFAULT_MASTER_OPTS
+    __builtins__.__salt__.update(
+        salt.loader.minion_mods(
+            __opts__
+        )
     )
-)
 
-# Solve the Chicken and egg problem where grains need to run before any
-# of the modules are loaded and are generally available for any usage.
-import salt.modules.cmdmod
 from salt.modules import git
 
 def git_clone_salt():
+
     git.clone(
         cwd='/home/tony/study/salt/_salt',
         repository='https://github.com/saltstack/salt',
@@ -77,12 +73,13 @@ def git_clone_salt():
 
 def latest_salt():
 
-    from salt.states import git
+    import salt.states.git
 
-    return git.latest(
+    return salt.states.git.latest(
         target='/home/tony/study/salt/_salt2',
         name='https://github.com/saltstack/salt',
     )
 
 if __name__ == '__main__':
+    bootstrap_python()
     print(latest_salt())
