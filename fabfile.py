@@ -53,7 +53,6 @@ def salt_run_fabric(cmd,
         user=runas,
         timeout=timeout,
         warn_only=ignore_retcode,
-        stdin=stdin,
         stdout=stdout,
         stderr=stderr,
         env=env
