@@ -3,3 +3,5 @@ deploy/id_rsa.pub
 
 roots/pillar/settings.sls
 roots/pillar/*.sls
+
+.vagrant
