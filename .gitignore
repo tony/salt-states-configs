@@ -5,3 +5,4 @@ roots/pillar/settings.sls
 roots/pillar/*.sls
 
 .vagrant
+.env
