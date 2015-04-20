@@ -1,0 +1,4 @@
+file_client: local
+
+grains:
+  role: vagrant
