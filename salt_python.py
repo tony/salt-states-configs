@@ -74,63 +74,6 @@ def bootstrap_python():
         )
     )
 
-def salt_run_fabric(cmd,
-                    cwd=None,
-                    stdin=None,
-                    stdout=subprocess.PIPE,
-                    stderr=subprocess.PIPE,
-                    output_loglevel='debug',
-                    quiet=False,
-                    runas=None,
-                    shell=DEFAULT_SHELL,
-                    python_shell=True,
-                    env=None,
-                    clean_env=False,
-                    rstrip=True,
-                    template=None,
-                    umask=None,
-                    timeout=None,
-                    with_communicate=True,
-                    reset_system_locale=True,
-                    ignore_retcode=False,
-                    saltenv='base',
-                    use_vt=False):
-
-    """Adapter to fit salt's argument signature into into fabric's
-    subprocess wrapper."""
-
-    return fabric.operations.sudo(
-
-    )
-
-
-
-def bootstrap_fabric():
-    from salt.config import DEFAULT_MASTER_OPTS
-    from salt.modules.cmdmod import DEFAULT_SHELL
-
-    try:
-        import fabric
-    except ImportError:
-        raise Exception("""
-            You must install the latest version of salt:
-            pip install fabric
-        """)
-
-    __builtins__.__salt__ = {
-        'cmd.run': salt_run_fabric,
-        'cmd.run_all': salt.modules.cmdmod.run_all
-    }
-
-    __builtins__.__grains__ = {}
-    __builtins__.__opts__ = DEFAULT_MASTER_OPTS
-    __builtins__.__salt__.update(
-        salt.loader.minion_mods(
-            __opts__
-        )
-    )
-
-
 def git_clone_salt():
 
     from salt.modules import git
@@ -148,6 +91,8 @@ def latest_salt():
         target='/home/tony/study/salt/_salt2',
         name='https://github.com/saltstack/salt',
     )
+
+
 
 if __name__ == '__main__':
     bootstrap_python()
