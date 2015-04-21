@@ -1,7 +1,11 @@
 # -*- coding: utf-8 -*-
-"""Example of using this with a vagrant environment::
+"""Proof of concept to use saltstack's pure modules and states with fabric::
 
-    fab test -H 172.28.128.8 --password=vagrant --user=vagrant
+    fab list_packages print_specs -H <ip> --user=<user>
+
+On my vagrant environment:
+
+    fab list_packages print_specs -H <ip> --password=vagrant --user=vagrant
 """
 
 import os
@@ -90,6 +94,7 @@ def salt_run_fabric_quiet(cmd,
 
 def bootstrap_fabric():
     from salt.config import DEFAULT_MASTER_OPTS
+    from salt.grains.core import os_data
 
     __builtins__['__salt__'] = {
         'cmd.run': salt_run_fabric,
@@ -97,20 +102,33 @@ def bootstrap_fabric():
     }
 
     __builtins__['__context__'] = {}
-    __builtins__['__grains__'] = {}
+    __builtins__['__env__'] = {}
     __builtins__['__opts__'] = DEFAULT_MASTER_OPTS
+    __builtins__['__grains__'] = salt.loader.grains(__opts__)
+
     __builtins__['__salt__'].update(
         salt.loader.minion_mods(
             __opts__
         )
     )
+    print(__salt__.keys())
+
 
 bootstrap_fabric()
 
 
 @fabric.api.task
-def test():
-    fabric.api.run('echo hello')
-    from salt.modules import aptpkg
+def list_packages():
+    # from salt.modules import aptpkg
+    # if __grains__['os'] == 'MacOS' and sources:
+    # causes a race condition
+    #print(aptpkg.install('vim'))
 
+    from salt.modules import aptpkg
     print(aptpkg.list_pkgs())
+
+@fabric.api.task
+def print_specs():
+    from pprint import PrettyPrinter
+    pp = PrettyPrinter(indent=4).pprint
+    pp(__grains__)
