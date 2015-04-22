@@ -2,8 +2,8 @@
 {% set user = pillar['user'] %}
 
 include:
-  - python
-  - salt
+  - .python
+  - .salt
 
 
 swig:

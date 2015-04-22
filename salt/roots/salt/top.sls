@@ -7,7 +7,7 @@ base:
     - match: grain
     - base-x11.sanity
   'role:vagrant':
-    - vagrant.locale
-    - vagrant.python
-    - vagrant.salt
-    - vagrant.virtualenv
+    - vagrant-salt-dev.locale
+    - vagrant-salt-dev.python
+    - vagrant-salt-dev.salt
+    - vagrant-salt-dev.virtualenv

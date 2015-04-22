@@ -1,6 +1,5 @@
-git:
-  pkg.installed
-
+include:
+  - vcs.git
 
 github:
   ssh_known_hosts.present:
