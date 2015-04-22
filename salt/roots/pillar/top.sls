@@ -1,4 +1,6 @@
 base:
+  '*':
+    - paths
 
   'role:vagrant':
     - match: grain
