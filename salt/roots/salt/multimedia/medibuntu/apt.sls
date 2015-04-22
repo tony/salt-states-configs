@@ -1,3 +1,5 @@
+{% if grains['os'] == 'Ubuntu' %} 
+{% set codename = grains['oscodename'] %}
 medibuntu-apt:
   cmd:
     - run
@@ -12,6 +14,7 @@ medibuntu-apt:
     - group: root
     - mode: 644
     - template: jinja
-    - codename: {{ pillar['codename'] }}
+    - codename: {{ codename }}
     - require:
       - cmd: medibuntu-apt
+{% endif %}

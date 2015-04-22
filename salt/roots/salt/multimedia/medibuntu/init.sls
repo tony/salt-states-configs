@@ -1,3 +1,4 @@
+{%if grains['os'] == 'Ubuntu' %} 
 include:
   - medibuntu.apt
 
@@ -9,3 +10,4 @@ medibuntu:
       - libdvdcss2
     - require:
       - cmd: apt-update
+{% endif %}
