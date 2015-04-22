@@ -1,6 +1,6 @@
 {%if grains['os'] == 'Ubuntu' %} 
 include:
-  - medibuntu.apt
+  - multimedia.medibuntu.apt
 
 medibuntu:
   pkg:
