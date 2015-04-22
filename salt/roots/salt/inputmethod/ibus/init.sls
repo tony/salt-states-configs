@@ -1,5 +1,5 @@
 include:
-  - bashrc
+  - dot-configs.bash
 
 ibus:
   pkg.installed:
