@@ -40,8 +40,8 @@ Also, formulas are included (at a locked version / ref) in
 
 .. _saltstack-formulas: https://github.com/saltstack-formulas
 
-Dependency Formulae
--------------------
+Dependency Formulae (being deprecated)
+--------------------------------------
 
 These are already part of this project as a submodule, but you may also
 include them in your root as ``gitfs_remotes``.
