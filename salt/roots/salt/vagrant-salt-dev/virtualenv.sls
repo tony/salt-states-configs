@@ -4,6 +4,7 @@
 include:
   - .python
   - .salt
+  - lang.python.python-libs
 
 
 swig:
@@ -12,12 +13,6 @@ swig:
 
 libssl-dev:
   pkg.installed
-
-
-virtualenv:
-  pip.installed:
-    - require:
-      - pkg: python-pip
 
 
 base_virtualenv:
