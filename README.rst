@@ -25,16 +25,18 @@ Why is the structure like this?
 
 based off https://github.com/python/pypi-salt.
 
-``roots/`` is for anything that would be in ``file_roots`` or
+``salt/roots/`` is for anything that would be in ``file_roots`` or
 ``pillar_roots``.
 
 Also, formulas are included (at a locked version / ref) in
 ``roots/formulas``. These must be added into ``file_roots`` individually.
 
-- ./roots/pillar - pillar data
-- ./roots/dot-configs - dot-config sls states
-- ./roots/salt - package sls states
+- ./salt/roots/pillar - pillar data
+- ./salt/roots/dot-configs - dot-config sls states
+- ./salt/roots/salt - package sls states
 - ./roots/formulas - package sls from `saltstack-formulas`_ repository.
+  Note: this is being deprecated. I find setting up ``gitfs_remotes``
+  for the sake of getting remote formulas to be unintuitive.
 
 .. _saltstack-formulas: https://github.com/saltstack-formulas
 
@@ -77,7 +79,6 @@ Add the necessary ``file_roots`` and ``pillar_roots`` to your project.
             - /srv/salt/salt-states-tony/roots/formulas/users
             - /srv/salt/salt-states-tony/roots/formulas/openssh
             - /srv/salt/salt-states-tony/roots/formulas/salt
-            - /srv/salt/salt-states-tony/roots/formulas/ntp
 
 Note: to see an updated, full list of formulas / roots see the
 `minions/master`_ example file.
