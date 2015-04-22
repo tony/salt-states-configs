@@ -5,7 +5,7 @@ fcitx:
       - fcitx-googlepinyin
       - libgooglepinyin0
 
-ibus-bashrc:
+fcitx-bashrc:
   file.append:
     - name: /home/{{ pillar['username'] }}/.bashrc
     - text:
