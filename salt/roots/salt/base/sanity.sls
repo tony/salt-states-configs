@@ -4,7 +4,7 @@ include:
   - sysutils.tmux
   - editors.vim
   - shells.zsh
-  - ntp
+  - sysutils.ntp
 
 niceties:
   pkg.installed:
