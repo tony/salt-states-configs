@@ -1,5 +1,4 @@
-fortune:
+mednafen:
   pkg.installed:
     - names:
-      - mednafen
       - mednafen
