@@ -1,2 +1,2 @@
 include:
-  - zsh
+  - .zsh
