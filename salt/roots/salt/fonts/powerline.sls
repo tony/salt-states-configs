@@ -1,5 +1,5 @@
 include:
-  - devel.git
+  - vcs.git
 
 powerline-fonts:
   git.latest:
