@@ -1,2 +1,2 @@
 cmake:
-  pkg.latest
+  pkg.installed

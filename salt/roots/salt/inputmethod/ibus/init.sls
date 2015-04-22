@@ -2,7 +2,7 @@ include:
   - bashrc
 
 ibus:
-  pkg.latest:
+  pkg.installed:
     - names:
       - ibus-gtk
       - ibus-gtk3
@@ -12,7 +12,7 @@ ibus:
 
 
 ibus-table:
-  pkg.latest:
+  pkg.installed:
     - names:
       - ibus-googlepinyin
   require:

@@ -1,2 +1,2 @@
 vlc:
-  pkg.latest
+  pkg.installed

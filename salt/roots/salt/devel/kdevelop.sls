@@ -2,6 +2,6 @@ include:
   - devel.cmake
   
 kdevelop:
-  pkg.latest:
+  pkg.installed:
     - require:
       - pkg: cmake

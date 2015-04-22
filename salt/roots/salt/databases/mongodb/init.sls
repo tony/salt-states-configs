@@ -1,2 +1,2 @@
 mongodb:
-  pkg.latest
+  pkg.installed
