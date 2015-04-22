@@ -121,7 +121,8 @@ bootstrap_fabric()
 def list_packages():
     # from salt.modules import aptpkg
     # if __grains__['os'] == 'MacOS' and sources:
-    # causes a race condition
+    # causes a race condition. virtual modules must avoid dunder race
+    # conditions.
     #print(aptpkg.install('vim'))
 
     from salt.modules import aptpkg
