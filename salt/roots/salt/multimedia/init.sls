@@ -5,7 +5,3 @@ xubuntu-restricted-extra:
 flash:
   pkg.installed:
     - flashplugin-installer
-
-vlc:
-  pkg.installed:
-    - vlc
