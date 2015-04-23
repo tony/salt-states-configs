@@ -1,7 +1,0 @@
-/var/log/uwsgi/*log {
-  copytruncate
-  rotate 52
-  compress
-  delaycompress
-  missingok
-}
