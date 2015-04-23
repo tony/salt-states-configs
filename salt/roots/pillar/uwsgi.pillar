@@ -1,0 +1,52 @@
+# https://github.com/saltstack-formulas/uwsgi-formula - Apache 2
+# @ 24e951a8e5f9c1
+uwsgi:
+  # These are usually set by grains in map.jinja
+  lookup:
+    server_pkg: 'uwsgi'
+    pip: 'uwsgi'
+    plugins: ['uwsgi-plugin-php']
+  
+  package:
+    opts: {} # this partially exposes parameters of all pkg.installed used
+
+  # application in the uwsgi server default it will be places in app_available
+  application:
+    managed:
+      my_test_app.ini: # relative pathname of the application file
+        # may be True, False, or None where True is enabled, False, disabled, and None indicates no action
+        enabled: True
+
+        # May be a list of config options or None, if None, no vhost file will be managed/templated
+        config:
+          uid: 'www-data'
+          gid: 'www-data'
+          http: '127.0.0.1:8000'
+          plugin: 'python'
+          chdir: '/var/www/python_app'
+          wsgi_file: 'test.py'
+
+  # This is the uwsgi emperor configuration
+  emperor:
+    opts: {} # this partially exposes file.managed parameters for the emperor config file
+    config:
+      autoload: 'true'
+      master: 'true'
+      workers: '2'
+      log-date: 'true'
+      uid: 'www-data'
+      gid: 'www-data'
+      emperor: '/etc/uwsgi-emperor/vassals'
+
+  # vassal configuration for uwsgi emperor
+  vassal:
+    managed:
+      test_app.ini:
+        enabled: True
+        config:
+          uid: 'www-data'
+          gid: 'www-data'
+          http: '127.0.0.1:8000'
+          plugin: 'python'
+          chdir: '/var/www/python_app'
+          wsgi_file: 'test.py'

@@ -1,0 +1,91 @@
+{% macro sls_block(dict) %}
+    {% for key, value in dict.items() %}
+    - {{ key }}: {{ value|json() }}
+    {% endfor %}
+{% endmacro %}
+
+{% set uwsgi = salt['pillar.get']('uwsgi', {
+  'lookup': salt['grains.filter_by']({
+    'Debian': {
+      'server_pkg'              : 'uwsgi',
+      'uwsgi_dir'               : '/etc/uwsgi',
+      'uwsgi_service'           : 'uwsgi',
+      'application_available'   : '/etc/uwsgi/apps-available',
+      'application_enabled'     : '/etc/uwsgi/apps-enabled',
+      'application_use_symlink' : True,
+      'emperor_pkg'             : 'uwsgi-emperor',
+      'emperor_service'         : 'uwsgi-emperor',
+      'emperor_dir'             : '/etc/uwsgi-emperor',
+      'vassal_available'        : '/etc/uwsgi-emperor/vassals',
+      'vassal_enabled'          : '/etc/uwsgi-emperor/vassals',
+      'vassal_use_symlink'      : False,
+      'emperor_config'          : 'emperor.ini',
+      'plugins'                 : ['uwsgi-plugin-python'],
+    },
+    'Arch': {
+      'server_pkg'              : 'uwsgi',
+      'uwsgi_dir'               : '/etc/uwsgi',
+      'uwsgi_service'           : 'uwsgi@',
+      'application_available'   : '/etc/uwsgi',
+      'application_enabled'     : '/etc/uwsgi',
+      'application_use_symlink' : False,
+      'emperor_pkg'             : 'uwsgi',
+      'emperor_service'         : 'emperor.uwsgi',
+      'emperor_dir'             : '/etc/uwsgi',
+      'vassal_available'        : '/etc/uwsgi/vassals',
+      'vassal_enabled'          : '/etc/uwsgi/vassals',
+      'vassal_use_symlink'      : False,
+      'emperor_config'          : 'emperor.ini',
+      'plugins'                 : ['uwsgi-plugin-python','uwsgi-plugin-python2'],
+    },
+  }, default='Debian' ),
+
+  'package': {
+    'opts': {},
+  },
+
+  'service': {
+    'enable': True,
+    'opts': {},
+  },
+
+  'applications': {
+    'disabled_postfix': '.disabled',
+    'symlink_opts': {},
+    'rename_opts': {},
+    'managed_opts': {},
+    'dir_opts': {
+      'makedirs': True,
+    },
+    'managed': {},
+  },
+
+  'emperor': {
+    'opts': {},
+    'config': {
+      'autoload': 'true',
+      'master': 'true',
+      'workers': '2',
+      'no-orphans': 'true',
+      'log-date': 'true',
+      'uid': 'www-data',
+      'gid': 'www-data',
+      'emperor': '/etc/uwsgi-emperor/vassals',
+    },
+  },
+
+  'vassals': {
+    'disabled_postfix': '.disabled',
+    'symlink_opts': {},
+    'rename_opts': {},
+    'managed_opts': {},
+    'dir_opts': {
+      'makedirs': True,
+    },
+    'managed': {},
+  },
+
+}, merge=True) %}
+
+
+
