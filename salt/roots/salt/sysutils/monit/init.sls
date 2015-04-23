@@ -1,13 +1,14 @@
 monit:
-  pkg.installed: []
+  pkg:
+    - installed
   service.running:
     - enable: True
     - require:
-      - pkg.installed: monit
-      - file.sed: /etc/default/monit
-      - file.append: /etc/monit/monitrc
+      - pkg: monit
+      - file: /etc/default/monit
+      - file: /etc/monit/monitrc
     - watch:
-      - file.append: /etc/monit/monitrc
+      - file: /etc/monit/monitrc
   file.append:
     - name: /etc/monit/monitrc
     - text:
