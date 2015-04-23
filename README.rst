@@ -19,39 +19,21 @@ Features
 
 * Support for dot-configurations
 * Support for provisining minions
+* Support for testing states via `vagrant`_
+  
+.. _vagrant: https://www.vagrantup.com/
 
-Why is the structure like this?
--------------------------------
+Structure
+---------
 
-based off https://github.com/python/pypi-salt.
+Originally based off https://github.com/python/pypi-salt.
 
 ``salt/roots/`` is for anything that would be in ``file_roots`` or
 ``pillar_roots``.
 
-Also, formulas are included (at a locked version / ref) in
-``roots/formulas``. These must be added into ``file_roots`` individually.
-
 - ./salt/roots/pillar - pillar data
 - ./salt/roots/dot-configs - dot-config sls states
 - ./salt/roots/salt - package sls states
-- ./roots/formulas - package sls from `saltstack-formulas`_ repository.
-  Note: this is being deprecated. I find setting up ``gitfs_remotes``
-  for the sake of getting remote formulas to be unintuitive.
-
-.. _saltstack-formulas: https://github.com/saltstack-formulas
-
-Dependency Formulae (being deprecated)
---------------------------------------
-
-These are already part of this project as a submodule, but you may also
-include them in your root as ``gitfs_remotes``.
-
-For more information, see `Salt Formulas documentation`_.
-
-- https://github.com/saltstack-formulas/users-formula
-- https://github.com/saltstack-formulas/openssh-formula
-
-.. _Salt Formulas documentation: http://docs.saltstack.com/en/latest/topics/development/conventions/formulas.html
 
 Setup
 -----
@@ -60,7 +42,7 @@ Clone the data recursively (include submodules):
 
 .. code:: bash
 
-   git clone --recursive https://github.com/tony/salt-states-configs.git /srv/salt/salt-states-tony
+   git clone https://github.com/tony/salt-states-configs.git /srv/salt/salt-states-tony
 
 Add the necessary ``file_roots`` and ``pillar_roots`` to your project.
 
@@ -70,15 +52,11 @@ Add the necessary ``file_roots`` and ``pillar_roots`` to your project.
 
     pillar_roots:
         base:
-            - /srv/salt/salt-states-tony/roots/pillar
+            - /srv/salt/salt-states-tony/salt/roots/pillar
 
     file_roots:
         base:
-            - /srv/salt/salt-states-tony/roots/salt
-            - /srv/salt/salt-states-tony/roots/dot-configs
-            - /srv/salt/salt-states-tony/roots/formulas/users
-            - /srv/salt/salt-states-tony/roots/formulas/openssh
-            - /srv/salt/salt-states-tony/roots/formulas/salt
+            - /srv/salt/salt-states-tony/salt/roots/salt
 
 Note: to see an updated, full list of formulas / roots see the
 `minions/master`_ example file.
@@ -88,9 +66,6 @@ Restart the salt master.
 .. code:: bash
 
     $ [sudo] /etc/init.d/salt-master restart
-
-Customize your pillar data in ``roots/pillar`` from the ``.example``
-files.
 
 .. _minions/master: https://github.com/tony/salt-states-configs/blob/master/minions/master
 
