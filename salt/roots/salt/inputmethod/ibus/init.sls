@@ -1,6 +1,3 @@
-include:
-  - dot-configs.bash
-
 ibus:
   pkg.installed:
     - names:
@@ -9,7 +6,6 @@ ibus:
       - ibus-qt4
     - require_in:
       - file: ibus-bashrc
-
 
 ibus-table:
   pkg.installed:
