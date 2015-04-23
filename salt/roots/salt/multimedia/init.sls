@@ -1,7 +1,7 @@
 xubuntu-restricted-extra:
-  pkg.installed:
-    - xubuntu-restricted-extras
+  pkg:
+    - installed
 
 flash:
-  pkg.installed:
-    - flashplugin-installer
+  pkg:
+    - installed
