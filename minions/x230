@@ -1,8 +1,0 @@
-id: 'x230'
-grains:
-  roles:
-    - x11
-    - laptop
-    - dev
-
-# vim: set ft=sls:

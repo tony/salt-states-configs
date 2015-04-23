@@ -1,7 +1,0 @@
-# vagrant example
-id: 'minion1'
-grains:
-  roles:
-    - vagrant
-
-# vim: set ft=sls:
