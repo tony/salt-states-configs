@@ -4,7 +4,7 @@
 include:
   - .python
   - .salt
-  - lang.python.python-libs
+  - lang.python
 
 
 swig:

@@ -7,6 +7,14 @@ python-software-properties:
     #  require:
       #    - pkg: python2.7
 
+python-pip:
+  pkg:
+   - installed
+
+python-dev:
+  pkg:
+    - installed
+
 python2:
   pkg.installed:
     - names:

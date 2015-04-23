@@ -1,3 +1,6 @@
+include:
+  - lang.python
+  
 /etc/logrotate.d/uwsgi:
   file.managed:
     - source: salt://www/uwsgi/etc/logrotate.d/uwsgi
@@ -12,8 +15,6 @@ uwsgi-packages:
 
 uwsgi:
   pip.installed:
-    - pkgs:
-        uwsgi
     - require:
       - pkg: python-dev
       - pkg: python-pip
