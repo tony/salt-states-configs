@@ -4,6 +4,14 @@ Changelog
 
 Here you can find the recent changes to tony/salt-states-config.
 
+2015-04-23
+----------
+
+- Remove submodule formulas
+- Restructure formulas
+- Add ``Vagrantfile``
+- Vendorize https://github.com/saltstack-formulas/users-formula
+
 2014-04-20
 ----------
 

@@ -1,5 +1,6 @@
 # vim: sts=2 ts=2 sw=2 et ai
 # From https://github.com/saltstack-formulas/users-formula
+# @ fffad7d07ad76dbe7585d38d428c3432a76a0bae
 # License Apache 2
 {% from "users/map.jinja" import users with context %}
 {% set used_sudo = [] %}
