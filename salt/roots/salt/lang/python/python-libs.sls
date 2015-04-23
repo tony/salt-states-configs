@@ -19,10 +19,10 @@ virtualenv:
   pip:
     - installed
   require:
-    - pkg.installed: python2
+    - pkg: python2
 
 virtualenvwrapper:
   pip:
     - installed
     - require:
-      - pip.installed: virtualenv
+      - pip: virtualenv
