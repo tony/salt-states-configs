@@ -1,5 +1,5 @@
 include:
-  - devel.cmake
+  - pkg.devel.cmake
   
 kdevelop:
   pkg.installed:

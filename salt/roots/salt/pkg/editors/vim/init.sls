@@ -1,5 +1,5 @@
 include:
-  - vcs.git
+  - pkg.vcs.git
 
 vim-deps:
    pkg.installed:
