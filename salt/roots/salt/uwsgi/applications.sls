@@ -1,6 +1,6 @@
-{% from 'www/uwsgi/map.jinja' import uwsgi, sls_block with context %}
-{% from 'www/uwsgi/application_config.sls' import application_states with context %}
-{% from 'www/uwsgi/service.sls' import service_function with context %}
+{% from 'uwsgi/map.jinja' import uwsgi, sls_block with context %}
+{% from 'uwsgi/application_config.sls' import application_states with context %}
+{% from 'uwsgi/service.sls' import service_function with context %}
 
 {% macro file_requisites(states) %}
       {%- for state in states %}
@@ -9,8 +9,8 @@
 {% endmacro %}
 
 include:
-  - .service
-  - .application_config
+  - uwsgi.service
+  - uwsgi.application_config
 
 {% if application_states|length() > 0 %}
 uwsgi_service_reload:

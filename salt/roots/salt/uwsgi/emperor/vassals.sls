@@ -1,6 +1,6 @@
-{% from 'www/uwsgi/map.jinja' import uwsgi, sls_block with context %}
-{% from 'www/uwsgi/emperor/vassal_config.sls' import vassal_states with context %}
-{% from 'www/uwsgi/emperor/service.sls' import service_function with context %}
+{% from 'uwsgi/map.jinja' import uwsgi, sls_block with context %}
+{% from 'uwsgi/emperor/vassal_config.sls' import vassal_states with context %}
+{% from 'uwsgi/emperor/service.sls' import service_function with context %}
 
 {% macro file_requisites(states) %}
       {%- for state in states %}
@@ -9,8 +9,8 @@
 {% endmacro %}
 
 include:
-  - .service
-  - .vassal_config
+  - uwsgi.emperor.service
+  - uwsgi.emperor.vassal_config
 
 {% if vassal_states|length() > 0 %}
 uwsgi_emperor_service_reload:

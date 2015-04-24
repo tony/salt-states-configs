@@ -1,5 +1,3 @@
-
-
 lxappearance:
   pkg.installed:
     - names:

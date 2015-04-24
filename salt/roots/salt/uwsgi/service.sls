@@ -1,9 +1,9 @@
-{% from "www/uwsgi/map.jinja" import uwsgi, sls_block with context %}
+{% from "uwsgi/map.jinja" import uwsgi, sls_block with context %}
 {% set service_function = {True:'running', False:'dead'}.get(uwsgi.service.enable) %}
 
 
 include:
-  - .install
+  - uwsgi.install
 
 {% if grains['os_family']=="Arch" %}
 #TODO 

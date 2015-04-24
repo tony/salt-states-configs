@@ -1,9 +1,9 @@
-{% from "www/uwsgi/map.jinja" import uwsgi, sls_block with context %}
+{% from "uwsgi/map.jinja" import uwsgi, sls_block with context %}
 {% set service_function = {True:'running', False:'dead'}.get(uwsgi.service.enable) %}
 
 
 include:
-  - .install
+  - uwsgi.emperor.install
 
 uwsgi_emperor_service:
   service.{{ service_function }}:

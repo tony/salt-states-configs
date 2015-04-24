@@ -2,7 +2,7 @@
 #
 # Manages the configuration of uwsgi vassal files.
 
-{% from 'www/uwsgi/map.jinja' import uwsgi, sls_block with context %}
+{% from 'uwsgi/map.jinja' import uwsgi, sls_block with context %}
 {% set vassal_states = [] %}
 
 # Simple path concatenation.

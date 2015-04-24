@@ -1,4 +1,4 @@
-{% from "www/uwsgi/map.jinja" import uwsgi, sls_block with context %}
+{% from "uwsgi/map.jinja" import uwsgi, sls_block with context %}
 
 uwsgi_emperor_install:
   pkg.installed:

@@ -1,5 +1,5 @@
 include:
-  - fonts
+  - pkg.fonts
 
 rxvt-unicode:
   pkg:

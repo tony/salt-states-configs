@@ -2,7 +2,7 @@
 #
 # Manages the configuration of uwsgi application files.
 
-{% from 'www/uwsgi/map.jinja' import uwsgi, sls_block with context %}
+{% from 'uwsgi/map.jinja' import uwsgi, sls_block with context %}
 {% set application_states = [] %}
 
 # Simple path concatenation.
@@ -90,7 +90,7 @@ uwsgi_application_available_dir:
   file.managed:
     {{ sls_block(uwsgi.applications.managed_opts) }}
     - name: {{ application_curpath(application) }}
-    - source: salt://www/uwsgi/files/application.jinja
+    - source: salt://uwsgi/files/application.jinja
     - template: jinja
     - context:
         config: {{ settings.config|json() }}

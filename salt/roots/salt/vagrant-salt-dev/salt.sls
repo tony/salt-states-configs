@@ -1,5 +1,5 @@
 include:
-  - vcs.git
+  - pkg.vcs.git
 
 github:
   ssh_known_hosts.present:

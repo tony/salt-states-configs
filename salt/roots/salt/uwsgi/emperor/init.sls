@@ -3,9 +3,9 @@
 # Meta-state to install uwsgi emperor
 
 include:
-  - .config
-  - .service
-  - .vassals
+  - uwsgi.emperor.config
+  - uwsgi.emperor.service
+  - uwsgi.emperor.vassals
 
 extend:
   uwsgi_emperor_service:
